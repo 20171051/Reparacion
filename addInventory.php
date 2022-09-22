@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp" ng-app lang="en">
 	<head>
-		<title>PC Solutions - Customer</title>
+	<title>Ausbert multiservice-Clientes</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<meta charset="utf-8">
@@ -35,7 +35,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Buscar Cliente...">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -56,7 +56,7 @@
 							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
 							<p>
 								<a href="logout.php" title="Sign out">
-									<span>Sign-out</span>
+									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
 									</span>
@@ -108,7 +108,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
 							</span>
-							<span>Estimado</span>
+							<span>Cotizaciones</span>
 						</a>
 					</li>
 					<li>
@@ -136,11 +136,11 @@
 			<div class="bread dash">
 				<div class="submenu">
 					<ul>
-						<li id="back"><a href="##" onClick="history.go(-1); return false;">Go Back</a></li>
+						<li id="back"><a href="##" onClick="history.go(-1); return false;">Retroceder</a></li>
 						
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href="inventory.php">Inventory</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Add New Item</span>
+				<h3><a style="text-decoration: none;" href="inventory.php">Inventario</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Add New Item</span>
 			</div>
 			<!--Breadcrumb -->
 			
@@ -149,17 +149,17 @@
 				<div class="full-widget">		
 					
 					<form class="form-4" action="" method="post">
-						<h1>Adding a new item to the inventory: </h1>
+						<h1>Agregar al inventario: </h1>
 						<span id="msg">
 							<?php 
 								echo $success; 
 								echo $error;
 							?>
 						</span>
-						<input type="text" name="description" placeholder="Description" required>
-						<input type="number" name="quantity" placeholder="Quantity" required>
-						<input type="text" name="price" placeholder="Price" required>
-						<input type="submit" name="submit" value="ADD NEW ITEM">
+						<input type="text" name="description" placeholder="Descripcion" required>
+						<input type="number" name="quantity" placeholder="Cantidad" required>
+						<input type="text" name="price" placeholder="Precio" required>
+						<input type="submit" name="submit" value="Agregar">
 					</form>
 					
 				</div>

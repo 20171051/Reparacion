@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp" ng-app lang="en">
 	<head>
-		<title>PC Solutions - Estimates</title>
+	<title>Ausbert multiservice-Cotizaciones</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<meta charset="utf-8">
@@ -40,7 +40,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -61,7 +61,7 @@
 							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
 							<p>
 								<a href="logout.php" title="Sign out">
-									<span>Sign-out</span>
+									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
 									</span>
@@ -89,7 +89,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-home"></i>
 							</span>
-							<span>Home</span>
+							<span>Inicio</span>
 						</a>
 					</li>
 					<li>
@@ -97,7 +97,7 @@
 							<span class="icon"> 
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
-							<span>Customers</span>
+							<span>Clientes</span>
 						</a>
 					</li>
 					<li>
@@ -105,7 +105,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
-							<span>Repairs</span>
+							<span>Reparaciones</span>
 						</a>
 					</li>
 					<li class="active">
@@ -113,7 +113,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
 							</span>
-							<span>Estimates</span>
+							<span>Cotizaciones</span>
 						</a>
 					</li>
 					<li>
@@ -121,7 +121,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>Inventory</span>
+							<span>Inventario</span>
 						</a>
 					</li>
 					<li>
@@ -141,11 +141,11 @@
 			<div class="bread">
 				<div class="submenu">
 					<ul>
-						<li><a href="chooseProducts.php">Go Back</a></li>
-						<li id="add"><a href="chooseRepair.php">Order Now</a></li>
+						<li><a href="chooseProducts.php">Retroceder</a></li>
+						<li id="add"><a href="chooseRepair.php">Ordena ahora</a></li>
 					</ul>
 				</div>
-				<h3>Choose Products</h3>
+				<h3>Elige el producto</h3>
 			</div>
 			<!--Breadcrumb -->
 			
@@ -157,7 +157,7 @@
 					<div ng-controller="repairsCrtl">
 						
 						<div class="row">
-							<div class="col-md-2">PageSize:
+							<div class="col-md-2">Tamaño de pagina:
 								<select ng-model="entryLimit" class="form-control">
 									<option>5</option>
 									<option>10</option>
@@ -170,7 +170,7 @@
 								<input type="text" ng-model="search" ng-change="filter()" placeholder="Filter" class="form-control" />
 							</div>
 							<div class="col-md-4">
-								<br><br><p>Filtered {{ filtered.length }} of {{ totalItems}} total repairs</p>
+								<br><br><p>Filtro {{ filtered.length }} de {{ totalItems}} total reparaciones</p>
 							</div>
 						</div>
 						<br/>
@@ -179,11 +179,11 @@
 								<table class="table table-striped table-bordered">
 									<thead>
 										<th>ID&nbsp;<a ng-click="sort_by('rep_id');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Description&nbsp;<a ng-click="sort_by('description');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Model&nbsp;<a ng-click="sort_by('model');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>DateAdded&nbsp;<a ng-click="sort_by('repairdate');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>UpdateDate&nbsp;<a ng-click="sort_by('collectiondate');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Status&nbsp;<a ng-click="sort_by('status');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<th>Descripciones&nbsp;<a ng-click="sort_by('description');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<th>Modelo&nbsp;<a ng-click="sort_by('model');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<th>Fecha de entrada&nbsp;<a ng-click="sort_by('repairdate');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<th> Fecha de Actualizacion&nbsp;<a ng-click="sort_by('collectiondate');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<th>Estado&nbsp;<a ng-click="sort_by('status');"><i class="glyphicon glyphicon-sort"></i></a></th>
 									</thead>
 									<tbody>
 										<tr ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
@@ -199,7 +199,7 @@
 							</div>
 							<div class="col-md-12" ng-show="filteredItems == 0">
 								<div class="col-md-12">
-									<h4>No repairs found</h4>
+									<h4>No se encontró equipo/h4>
 								</div>
 							</div>
 							<div class="col-md-12" ng-show="filteredItems > 0">    
@@ -212,9 +212,9 @@
 					<div>
 						
 						<form class="form-4" method="post" action="orderNow.php">	
-							<p>Enter Repair ID to place a new order:</p> <br>
-							<input type="number" name="record" placeholder="Enter ID number e.g. 1" min="1" maxlength="10" required>
-							<input type="submit" name="go" value="Order Now >>">	
+							<p>Ingresa el ID para crear Orden</p> <br>
+							<input type="number" name="record" placeholder="Ingresa un ID" min="1" maxlength="10" required>
+							<input type="submit" name="go" value="Ordenar >>">	
 						</form>
 						
 					</div>

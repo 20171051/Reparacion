@@ -37,7 +37,7 @@
 			$valid = mysqli_query($conn, $query);
 			
 			if (!$valid) {
-				$error = "Could not connect to the database!";
+				$error = "No se pudo conectar a la base de datos";
 			}
 			
 			if (mysqli_num_rows($valid) == 0 ) {
@@ -46,23 +46,24 @@
 				$res = mysqli_query($conn, $sql);
 				
 				if (!$res) {
-					$error = "Error registering....";
+					$error = "Error registrando...";
 				}
 				
 				if (mysqli_affected_rows($conn) == 1) {
-					$success =  "Customer created successfully. Redirecting.....";
+					$success =  "Cliente registrado con éxito. Redireccionando.....";
 					header("refresh:5; url=customer.php");
 					
 					} else {
-					$error =  ("Could not register due to system error!");
+					$error =  ("
+					¡No se pudo registrar debido a un error del sistema!");
 				}
 				
 				} else {
-				$error = "The customer already exist in the system.";
+				$error = "Este cliente ya existe el sistema";
 			}
 			
 			} else {
-			$error = "Telephone number should numeric!";
+			$error = "Ingrese su numero de telefono correctamente";
 		}
 		
 		mysqli_close($conn);

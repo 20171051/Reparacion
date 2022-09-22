@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp" ng-app lang="en">
 	<head>
-		<title>PC Solutions - Customer</title>
+		<title>Ausbert multiservice-Cliente</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<meta charset="utf-8">
@@ -26,20 +26,20 @@
 	</head>
 	
 	<body id="top" style="font-size: 62.5%;">
-		<!-- BEGIN Header -->
+		<!-- Comienzo de cabeza-->
 		<header id="header-wrapper">
 			
 			<div id="top-bar" class="clearfix">
 				
 				<div id="top-bar-inner">
 					
-					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
+					<!-- Barra de busqueda por http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">
 						</form>
 					</div>
-					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
+					
 					
 					
 					<div class="topbar-right clearfix">
@@ -57,7 +57,7 @@
 							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
 							<p>
 								<a href="logout.php" title="Sign out">
-									<span>Sign-out</span>
+									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
 									</span>
@@ -85,7 +85,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-home"></i>
 							</span>
-							<span>Home</span>
+							<span>Inicio</span>
 						</a>
 					</li>
 					<li class="active">
@@ -93,7 +93,7 @@
 							<span class="icon"> 
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
-							<span>Customers</span>
+							<span>Cliente</span>
 						</a>
 					</li>
 					<li>
@@ -101,7 +101,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
-							<span>Repairs</span>
+							<span>Reparaciones</span>
 						</a>
 					</li>
 					<li>
@@ -109,7 +109,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
 							</span>
-							<span>Estimates</span>
+							<span>Cotizaciones</span>
 						</a>
 					</li>
 					<li>
@@ -117,7 +117,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>Inventory</span>
+							<span>Inventario</span>
 						</a>
 					</li>
 					<li>
@@ -125,7 +125,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-user"></i>
 							</span>
-							<span>Account</span>
+							<span>Cuenta</span>
 						</a>
 					</li>
 				</ul>
@@ -137,11 +137,11 @@
 			<div class="bread dash">
 				<div class="submenu">
 					<ul>
-						<li><a href="##" onClick="history.go(-1); return false;">Go Back</a></li>
-						<li id="add"><a href="addCustomer.php">Add Customer</a></li>
+						<li><a href="##" onClick="history.go(-1); return false;">Retroceder</a></li>
+						<li id="add"><a href="addCustomer.php">Agregar cliente</a></li>
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href="customer.php">Customers</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Update Customer</span>
+				<h3><a style="text-decoration: none;" href="customer.php">Cliente</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Actualizar</span>
 			</div>
 			<!--Breadcrumb -->
 			
@@ -155,13 +155,13 @@
 						?>
 					</span>
 					<form class="form-4" action="" method="post">
-						Customer ID: <input type="text" name="ud_id" value="<?php echo $id; ?>" readonly>
-						First Name: <input type="text" name="ud_forename" value="<?php echo $forename; ?>"><br />
-						Last Name: <input type="text" name="ud_surname" value="<?php echo $surname; ?>"><br />
-						Town: <input type="text" name="ud_town" value="<?php echo $town; ?>"><br />
-						County: <input type="text" name="ud_county" value="<?php echo $county; ?>"><br />
-						Telephone: <input type="text" name="ud_tel" value="<?php echo $tel; ?>"><br />
-						<input type="submit" name="submit" value="Update Customer Details">
+						ID del cliente: <input type="text" name="ud_id" value="<?php echo $id; ?>" readonly>
+						Nombre <input type="text" name="ud_surname" value="<?php echo $surname; ?>"><br />
+						Apellido: <input type="text" name="ud_forename" value="<?php echo $forename; ?>"><br />
+						Dirección: <input type="text" name="ud_town" value="<?php echo $town; ?>"><br />
+						Cedula: <input type="text" name="ud_county" value="<?php echo $county; ?>"><br />
+						Telefono: <input type="text" name="ud_tel" value="<?php echo $tel; ?>"><br />
+						<input type="submit" name="submit" value="Actualizar">
 					</form>
 					
 				</div>

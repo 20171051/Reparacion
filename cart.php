@@ -15,17 +15,17 @@
 		//require_once('repairs.php');
 	}
 ?>
-<h1>View cart</h1>
-<a href="chooseProducts.php?page=products">Go back to products page</a>
+<h1>Ver carrito</h1>
+<a href="chooseProducts.php?page=products">Volver a la pagina del producto</a>
 <form method="post" action="chooseProducts.php?page=cart">
 	
     <table>
 		
         <tr>
-            <th>Stock#</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Items Price</th>
+            <th>Inventario disponible#</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Precio de los elementos</th>
 		</tr>
 		
         <?php
@@ -62,12 +62,12 @@
 			}
 		?>
 		<tr>
-			<td colspan="4">Total Price: <?php echo '&euro;'. $totalprice ?></td>
+			<td colspan="4">Total: <?php echo '&euro;'. $totalprice ?></td>
 		</tr>
 		
 	</table>
     <br />
-    <button type="submit" name="submit">Update Cart</button>
+    <button type="submit" name="submit">Actualizar carrito</button>
 </form>
 <br />
-<p>To remove an item, set it's quantity to 0. </p>
+<p>Para eliminar un artículo, establezca su cantidad en 0.</p>

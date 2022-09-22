@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp" ng-app lang="en">
 	<head>
-		<title>PC Solutions - Add Repair</title>
+		<title>Ausbert multiservice-Agregar reparacion</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<meta charset="utf-8">
@@ -39,7 +39,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente...">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -60,7 +60,7 @@
 							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
 							<p>
 								<a href="logout.php" title="Sign out">
-									<span>Sign-out</span>
+									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
 									</span>
@@ -88,7 +88,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-home"></i>
 							</span>
-							<span>Home</span>
+							<span>Inicio</span>
 						</a>
 					</li>
 					<li>
@@ -96,7 +96,7 @@
 							<span class="icon"> 
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
-							<span>Customers</span>
+							<span>Clientes</span>
 						</a>
 					</li>
 					<li class="active">
@@ -104,7 +104,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
-							<span>Repairs</span>
+							<span>Reparaciones</span>
 						</a>
 					</li>
 					<li>
@@ -120,7 +120,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>Inventory</span>
+							<span>Inventario</span>
 						</a>
 					</li>
 					<li>
@@ -128,7 +128,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-coin"></i>
 							</span>
-							<span>Invoices</span>
+							<span>Facturas</span>
 						</a>
 					</li>
 				</ul>
@@ -140,11 +140,11 @@
 			<div class="bread">
 				<div class="submenu">
 					<ul>
-						<li id="back"><a href="##" onClick="history.go(-1); return false;">Go Back</a></li>
+						<li id="back"><a href="##" onClick="history.go(-1); return false;">Retroceder</a></li>
 						
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href="repairs.php">Repairs</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Add Repair</span>
+				<h3><a style="text-decoration: none;" href="repairs.php">Reparaciones</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Agregar</span>
 			</div>
 			<!--Breadcrumb -->
 			
@@ -154,7 +154,7 @@
 					<div ng-controller="customerCrtl">
 						
 						<div class="row">
-							<div class="col-md-2">PageSize:
+							<div class="col-md-2">Tamaño de pagina:
 								<select ng-model="entryLimit" class="form-control">
 									<option>5</option>
 									<option>10</option>
@@ -163,11 +163,11 @@
 									<option>100</option>
 								</select>
 							</div>
-							<div class="col-md-3">Filter:
+							<div class="col-md-3">Filtro:
 								<input type="text" ng-model="search" ng-change="filter()" placeholder="Filter" class="form-control" />
 							</div>
 							<div class="col-md-4">
-								<p>Filtered {{ filtered.length }} of {{ totalItems}} total customers</p>
+								<p>Filtro {{ filtered.length }} de {{ totalItems}}  total de clientes </p>
 							</div>
 						</div>
 						<br/>
@@ -196,7 +196,7 @@
 							</div>
 							<div class="col-md-12" ng-show="filteredItems == 0">
 								<div class="col-md-12">
-									<h4>No customers found</h4>
+									<h4>Cliente no encontrado</h4>
 								</div>
 							</div>
 							<div class="col-md-12" ng-show="filteredItems > 0">    
@@ -210,8 +210,8 @@
 					
 					<div>
 						<form class="form-4" method="post" action="addRepairForm.php">	
-							<p>Enter Customer's ID to Proceed with Repair:</p> <br>
-							<input type="number" name="record" placeholder="Enter ID number e.g. 1" min="1" maxlength="10" required>
+							<p>Ingrese el ID del cliente para continuar con el registro del equipo:</p> <br>
+							<input type="number" name="record" placeholder="Introduzca un numero ej: 1" min="1" maxlength="10" required>
 							<input type="submit" name="go" value="Go to repair form >>">	
 						</form>
 					</div>

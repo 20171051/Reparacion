@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>PC Solutions - Update Repair</title>
+		<title>Ausbert Multi Service - Actualizar reparacion</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<meta charset="utf-8">
@@ -37,7 +37,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -86,7 +86,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-home"></i>
 							</span>
-							<span>Home</span>
+							<span>Inicio</span>
 						</a>
 					</li>
 					<li>
@@ -94,7 +94,7 @@
 							<span class="icon"> 
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
-							<span>Customers</span>
+							<span>Clientes</span>
 						</a>
 					</li>
 					<li class="active">
@@ -102,7 +102,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
-							<span>Repairs</span>
+							<span>Reparaciones</span>
 						</a>
 					</li>
 					<li>
@@ -110,7 +110,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
 							</span>
-							<span>Estimates</span>
+							<span>Cotizaciones</span>
 						</a>
 					</li>
 					<li>
@@ -118,7 +118,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>Inventory</span>
+							<span>Inventario</span>
 						</a>
 					</li>
 					<li>
@@ -126,7 +126,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-coin"></i>
 							</span>
-							<span>Invoices</span>
+							<span>Facturas</span>
 						</a>
 					</li>
 				</ul>
@@ -138,11 +138,11 @@
 			<div class="bread dash">
 				<div class="submenu">
 					<ul>
-						<li><a href="##" onClick="history.go(-1); return false;">Go Back</a></li>
-						<li id="add"><a href="addRepair.php">Add Repair</a></li>
+						<li><a href="##" onClick="history.go(-1); return false;">Retroceder</a></li>
+						<li id="add"><a href="addRepair.php">Agregar reparación</a></li>
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href="repairs.php">Repairs</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Update Repair</span>
+				<h3><a style="text-decoration: none;" href="repairs.php">Reparacion</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Actualizacion de reparacion</span>
 			</div>
 			<!--Breadcrumb -->
 			
@@ -157,14 +157,14 @@
 					</span>
 					<form class="form-4" action="" method="post">
 						<input type="hidden" name="ud_id" value="<?php echo $id; ?>" readonly>
-						Customer_ID: <input type="text" name="ud_cust_id" value="<?php echo $cust_id; ?>" readonly>
+						ID del cliente: <input type="text" name="ud_cust_id" value="<?php echo $cust_id; ?>" readonly>
 						<input type="hidden" name="ud_staff_id" value="<?php echo $staff_id; ?>" readonly>
-						Device Type: <?php echo enumDropdown("repairs", "DeviceType", "ud_device"); ?>
-						Brand: <input type="text" name="ud_brand" value="<?php echo $brand; ?>" required>
-						Model: <input type="text" name="ud_model" value="<?php echo $model; ?>" required>
-						Operating System: <?php echo enumDropdown("repairs", "OS", "ud_os"); ?>
-						Description: <textarea rows="5" name="ud_description" required><?php echo $description; ?></textarea>
-						Status: <?php echo enumDropdown("repairs", "Status", "ud_status"); ?>
+						Tipo de equipo: <?php echo enumDropdown("repairs", "DeviceType", "ud_device"); ?>
+						Marca: <input type="text" name="ud_brand" value="<?php echo $brand; ?>" required>
+						Modelo: <input type="text" name="ud_model" value="<?php echo $model; ?>" required>
+						Sistema operativo: <?php echo enumDropdown("repairs", "OS", "ud_os"); ?>
+						Descripcion: <textarea rows="5" name="ud_description" required><?php echo $description; ?></textarea>
+						Estado: <?php echo enumDropdown("repairs", "Status", "ud_status"); ?>
 						<input type="submit" name="submit" value="Update Repair Details">
 						
 					</form>

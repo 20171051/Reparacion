@@ -22,7 +22,7 @@
 				}
 				
 				if(mysqli_num_rows($result) == 0) {
-					$error = "<ul> <li>Sorry, your search query (\"" .$name ."\") did not find any results!</li></ul>";
+					$error = "<ul> <li>Disculpa no hemos encontrado ningun resultado de (\"" .$name ."\") !</li></ul>";
 				}
 				//-create  while loop and loop through result set
 				while($row = mysqli_fetch_array($result)){
@@ -39,7 +39,7 @@
 				mysqli_close($conn);
 				
 				} else {
-				$error = "<ul> <li>Sorry, too many characters!</li></ul>";
+				$error = "<ul> <li>Demasiado caracteres!</li></ul>";
 			}	//end of string lenght check	
 		} 	
 	}

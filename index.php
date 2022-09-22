@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>PC Solutions</title>
+	<title>Ausbert multiservice</title>
 		<link rel="shortcut icon" href="../favicon.ico"> 
 		
 		<link rel="stylesheet" href="css/global.css">	
@@ -21,15 +21,15 @@
 	<body>
 		<div class="container">
 			<div class="rect">
-				<img src="images/logo-pcs.jpg">
+				<img src="images/logo.png">
 				<form class="form-4" method="post" action="">
-					<h1>Login / <span class="reg"><a href="register.php">Register</a></span></h1>
+					<h1>Login / <span class="reg"><a href="register.php">Registro</a></span></h1>
 					<span id="error"><?php echo $error; ?></span>
-					<label for="login">Username</label>
-					<input type="text" name="username" placeholder="Username" autofocus required>
+					<label for="login">Usuario</label>
+					<input type="text" name="username" placeholder="Usuario" autofocus required>
 					
-					<label for="password">Password</label>
-					<input type="password" name="password" placeholder="Password" required> 
+					<label for="password">Contraseña</label>
+					<input type="password" name="password" placeholder="Contraseña" required> 
 					
 					<input type="submit" name="submit" value="Login">
 					

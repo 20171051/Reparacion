@@ -11,17 +11,17 @@
 		
 	}
 ?>
-<h1>View cart</h1>
-<a href="index.php?page=products">Go back to products page</a>
+<h1>Ver carrito</h1>
+<a href="index.php?page=products">Volver a productos</a>
 <form method="post" action="index.php?page=cart">
 	
     <table>
 		
         <tr>
-            <th>Stock#</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Items Price</th>
+            <th>Disponibilidad#</th>
+			<th>Cantidad</th>
+            <th>Precio</th>
+            <th>Precio de los elementos</th>
 		</tr>
 		
         <?php
@@ -58,12 +58,12 @@
 			}
 		?>
 		<tr>
-			<td colspan="4">Total Price: <?php echo $totalprice ?></td>
+			<td colspan="4">Total precio: <?php echo $totalprice ?></td>
 		</tr>
 		
 	</table>
     <br />
-    <button type="submit" name="submit">Update Cart</button>
+    <button type="submit" name="submit">Actualizar Carrito</button>
 </form>
 <br />
-<p>To remove an item, set it's quantity to 0. </p>
+<p>Para eliminar un artículo, establezca su cantidad en 0.</p>

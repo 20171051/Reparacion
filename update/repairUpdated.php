@@ -34,7 +34,7 @@
 			//echo $res;
 			if(mysqli_affected_rows($dbcnx)< 1){
 				
-				$error = "<br><br><p><em>You have not amended anything! Redirecting....</em></p>";  
+				$error = "<br><br><p><em>No haz actualizado nada! Redireccionando...</em></p>";  
 				header("refresh:2; url=repairs.php");
 			}
 			else

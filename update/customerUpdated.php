@@ -8,7 +8,7 @@
 		$dbcnx = mysqli_connect("localhost", "root", "", "compsys");
 		
 		if (mysqli_connect_errno($dbcnx )) {
-			$error = "Failed to connect to MySQL: " .mysqli_connect_error();
+			$error = "No se conecto a la base de datos: " .mysqli_connect_error();
 			exit();
 		}
 		
@@ -34,12 +34,12 @@
 			//echo $res;
 			if(mysqli_affected_rows($dbcnx)< 1){
 				
-				$error = "<br><br><p><em>You have not amended anything! Redirecting....</em></p>";  
+				$error = "<br><br><p><em>No actualizaste nada! Redireccionando....</em></p>";  
 				header("refresh:2; url=customer.php");
 			}
 			else
 			{
-				$success =  "<br><p><em>Customer details have been updated successfully! Redirecting....</em></p>";
+				$success =  "<br><p><em>Se ha actualizado la información del cliente! Redireccionando....</em></p>";
 				header("refresh:2; url=customer.php");
 			}
 			

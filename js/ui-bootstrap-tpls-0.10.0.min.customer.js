@@ -956,7 +956,7 @@ angular.module("ui.bootstrap", ["ui.bootstrap.tpls", "ui.bootstrap.transition", 
     directionLinks: !0,
     firstText: "First",
     previousText: "Previous",
-    nextText: "Next",
+    nextText: "Sig",
     lastText: "Last",
     rotate: !0
 }).directive("pagination", ["$parse", "paginationConfig", function(a, b) {

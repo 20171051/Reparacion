@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp" ng-app lang="en">
 	<head>
-		<title>PC Solutions - Estimates</title>
+	<title>Ausbert multiservice-cotizaciones</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<meta charset="utf-8">
@@ -41,7 +41,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -62,7 +62,7 @@
 							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
 							<p>
 								<a href="logout.php" title="Sign out">
-									<span>Sign-out</span>
+									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
 									</span>
@@ -90,7 +90,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-home"></i>
 							</span>
-							<span>Home</span>
+							<span>Inicio</span>
 						</a>
 					</li>
 					<li>
@@ -98,7 +98,7 @@
 							<span class="icon"> 
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
-							<span>Customers</span>
+							<span>Clientes</span>
 						</a>
 					</li>
 					<li>
@@ -106,7 +106,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
-							<span>Repairs</span>
+							<span>Reparaciones</span>
 						</a>
 					</li>
 					<li class="active">
@@ -114,7 +114,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
 							</span>
-							<span>Estimates</span>
+							<span>Cotizaciones</span>
 						</a>
 					</li>
 					<li>
@@ -122,7 +122,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>Inventory</span>
+							<span>Inventario</span>
 						</a>
 					</li>
 					<li>
@@ -142,11 +142,11 @@
 			<div class="bread">
 				<div class="submenu">
 					<ul>
-						<li><a href="estimates.php">Go Back</a></li>
-						<li id="add"><a href="chooseRepair.php">Order Now</a></li>
+						<li><a href="estimates.php">Retroceder</a></li>
+						<li id="add"><a href="chooseRepair.php">Ordena ahora</a></li>
 					</ul>
 				</div>
-				<h3>Choose Products</h3>
+				<h3>Elige el producto</h3>
 			</div>
 			<!--Breadcrumb -->
 			

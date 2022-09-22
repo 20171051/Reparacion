@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp" ng-app lang="en">
 	<head>
-		<title>PC Solutions - Add Repair</title>
+	<title>Ausbert multiservice-Agregar reparacion</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<meta charset="utf-8">
@@ -37,7 +37,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente...">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -58,7 +58,7 @@
 							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
 							<p>
 								<a href="logout.php" title="Sign out">
-									<span>Sign-out</span>
+									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
 									</span>
@@ -86,7 +86,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-home"></i>
 							</span>
-							<span>Home</span>
+							<span>Inicio</span>
 						</a>
 					</li>
 					<li>
@@ -94,7 +94,7 @@
 							<span class="icon"> 
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
-							<span>Customers</span>
+							<span>Clientes</span>
 						</a>
 					</li>
 					<li class="active">
@@ -102,7 +102,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
-							<span>Repairs</span>
+							<span>Reparaciones</span>
 						</a>
 					</li>
 					<li>
@@ -110,7 +110,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
 							</span>
-							<span>Estimates</span>
+							<span>Cotizaciones</span>
 						</a>
 					</li>
 					<li>
@@ -118,7 +118,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>Inventory</span>
+							<span>Inventario</span>
 						</a>
 					</li>
 					<li>
@@ -126,7 +126,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-coin"></i>
 							</span>
-							<span>Invoices</span>
+							<span>Facturas</span>
 						</a>
 					</li>
 				</ul>
@@ -138,11 +138,11 @@
 			<div class="bread dash">
 				<div class="submenu">
 					<ul>
-						<li id="back"><a href="##" onClick="history.go(-1); return false;">Go Back</a></li>
+						<li id="back"><a href="##" onClick="history.go(-1); return false;">Retroceder</a></li>
 						
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href="repairs.php">Repairs</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Add Repair</span>
+				<h3><a style="text-decoration: none;" href="repairs.php">Reparaciones</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Agregar</span>
 			</div>
 			<!--Breadcrumb -->
 			
@@ -151,21 +151,21 @@
 				<div class="full-widget">		
 					
 					<form class="form-4" action="" method="post">
-						<h1>Adding a new repair: </h1>
+						<h1>Añadir Equipo: </h1>
 						<span id="msg">
 							<?php 
 								echo $success; 
 								echo $notFound;
 							?>
 						</span>
-						Customer ID: <input type="text" name="cust_id" placeholder="Customer ID is invalid" value="<?php echo $id; ?>" readonly>
+						Cliente ID: <input type="text" name="cust_id" placeholder="Customer ID is invalid" value="<?php echo $id; ?>" readonly>
 						<input type="hidden" name="staff_id" value="<?php echo $login_id; ?>" readonly>
 						<?php echo enumDropdown("repairs", "DeviceType", "device"); ?>
-						<input type="text" name="brand" placeholder="Brand" required>
-						<input type="text" name="model" placeholder="Model" required>
+						<input type="text" name="brand" placeholder="Marca" required>
+						<input type="text" name="model" placeholder="Modelo" required>
 						<?php echo enumDropdown("repairs", "OS", "os"); ?>
-						<textarea rows="5" name="description" placeholder="Description" required></textarea>
-						<input type="submit" name="submit" value="ADD NEW REPAIR">
+						<textarea rows="5" name="description" placeholder="Descripción" required></textarea>
+						<input type="submit" name="submit" value="Añadir">
 					</form>
 					
 				</div>

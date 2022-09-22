@@ -44,7 +44,7 @@
 			$valid = mysqli_query($conn, $query);
 			
 			if (!$valid) {
-				$notFound = "Could not connect to the database!<br><br>";
+				$notFound = "No se pudo conectar a la base de datos!<br><br>";
 			}
 			
 			
@@ -53,21 +53,22 @@
 			$res = mysqli_query($conn, $sql);
 			
 			if (!$res) {
-				$notFound = "Error adding...<br><br>";
+				$notFound = "Error agregando...<br><br>";
 			}
 			
 			if (mysqli_affected_rows($conn) == 1) {
-				$success =  "Repair added successfully. Redirecting.....<br><br>";
+				$success =  "Reparacion agregada exitosamente! . Redireccionando.....<br><br>";
 				$id = $cust_id;
 				//header("refresh:5; url=repairs.php");
 				
 				} else {
-				$notFound =  "Could not add due to system error!<br><br>";
+				$notFound =  "¡No se pudo agregar debido a un error del sistema!<br><br>";
 			}
 			
 			} else {
 			$id = $cust_id;
-			$notFound = "Customer wasn't found in the system. Please go back and enter a valid customer ID <br><br>";
+			$notFound = "No se encontró al cliente en el sistema. Regrese e ingrese una ID de cliente válida
+			<br><br>";
 		}
 		mysqli_close($conn);
 	}

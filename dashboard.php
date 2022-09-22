@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>PC Solutions - Dashboard</title>
+	<title>Ausbert multiservice- Dashboard</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<meta charset="utf-8">
@@ -35,7 +35,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -56,7 +56,7 @@
 							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
 							<p>
 								<a href="logout.php" title="Sign out">
-									<span>Sign-out</span>
+									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
 									</span>
@@ -84,7 +84,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-home"></i>
 							</span>
-							<span>Home</span>
+							<span>Inicio</span>
 						</a>
 					</li>
 					<li>
@@ -92,7 +92,7 @@
 							<span class="icon"> 
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
-							<span>Customers</span>
+							<span>Clientes</span>
 						</a>
 					</li>
 					<li>
@@ -100,7 +100,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
-							<span>Repairs</span>
+							<span>Reparaciones</span>
 						</a>
 					</li>
 					<li>
@@ -108,7 +108,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
 							</span>
-							<span>Estimates</span>
+							<span>Cotizaciones</span>
 						</a>
 					</li>
 					<li>
@@ -116,7 +116,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>Inventory</span>
+							<span>Inventario</span>
 						</a>
 					</li>
 					<li>
@@ -124,7 +124,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-user"></i>
 							</span>
-							<span>Account</span>
+							<span>Cuenta</span>
 						</a>
 					</li>
 				</ul>
@@ -133,7 +133,7 @@
 			
 			
 			<!--Breadcrumb -->
-			<div class="bread dash"><h3>Home</h3></div>
+			<div class="bread dash"><h3>Inicio</h3></div>
 			<!--Breadcrumb -->
 			
 			
@@ -141,7 +141,7 @@
 				
 				<!-- Easy access links -->
 				<div class="widget-content small-widget">
-					<h1 class="center">Get Started</h1>
+					
 					<ul>
 						
 						<li>
@@ -149,7 +149,7 @@
 								<span class="icon"> 
 									<i aria-hidden="true" class="icon-plus"></i>
 								</span>
-								<span>New Customer</span>
+								<span>Agregar cliente</span>
 							</a>
 						</li>
 						
@@ -158,7 +158,7 @@
 								<span class="icon"> 
 									<i aria-hidden="true" class="icon-plus"></i>
 								</span>
-								<span>New Repair</span>
+								<span>Agregar reparacion </span>
 							</a>
 						</li>
 						
@@ -167,7 +167,7 @@
 								<span class="icon"> 
 									<i aria-hidden="true" class="icon-plus"></i>
 								</span>
-								<span>New Estimate</span>
+								<span>Nueva cotizaciones</span>
 							</a>
 						</li>
 						
@@ -176,7 +176,7 @@
 								<span class="icon"> 
 									<i aria-hidden="true" class="icon-plus"></i>
 								</span>
-								<span>New Stock Item</span>
+								<span>Agregar a inventario</span>
 							</a>
 						</li>
 						
@@ -187,7 +187,7 @@
 				
 				<!-- Repair Summary -->
 				<div class="widget-content wide-widget">
-					<h1 class="center">Repair Summary</h1>
+					<h1 class="center">Detalles de reparación </h1>
 					<!--Div that will hold the pie chart-->
 					<div id="pie_chart" style="width: 100%; height: 362px;"></div>
 				</div>

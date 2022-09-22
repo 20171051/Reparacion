@@ -113,7 +113,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
 							</span>
-							<span>Estimado</span>
+							<span>Cotizaciones</span>
 						</a>
 					</li>
 					<li>
@@ -141,7 +141,7 @@
 			<div class="bread">
 				<div class="submenu">
 					<ul>
-						<li id="back" value="Update Inventory">Actualizar detalles de Cuenta</li>
+						<li id="back" value="Update Inventory">Actualizar</li>
 					</ul>
 				</div>
 				<h3>Cuenta</h3>
@@ -179,7 +179,7 @@
 							$tel = $row ['tel'];
 							
 							//-display the result of the array
-							$staff = "<ul><h1><li>" .$firstname . " " . $lastname .  "</li><li> "   .$town . "</li><li> "   .$county . "</li><li> "   .$tel . "</li></h1></ul>";
+							$staff = "<ul><h1><li> Nombre: " .$firstname . " Apellido" . $lastname .  "</li><li>Direccion:  "   .$town . "</li>Cedula<li> "   .$county . "</li><li> Telefono: "   .$tel . "</li></h1></ul>";
 							echo $staff;
 						}
 						mysqli_close($conn);

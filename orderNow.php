@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>PC Solutions - Order Now</title>
+	<title>Ausbert multiservice</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<meta charset="utf-8">
@@ -56,7 +56,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente...">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -113,7 +113,7 @@
 							<span class="icon"> 
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
-							<span>Customers</span>
+							<span>Clientes</span>
 						</a>
 					</li>
 					<li>
@@ -121,7 +121,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
-							<span>Repairs</span>
+							<span>Reparaciones</span>
 						</a>
 					</li>
 					<li class="active">
@@ -129,7 +129,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
 							</span>
-							<span>Estimates</span>
+							<span>Cotizaciones</span>
 						</a>
 					</li>
 					<li>
@@ -137,7 +137,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>Inventory</span>
+							<span>Inventario</span>
 						</a>
 					</li>
 					<li>
@@ -145,7 +145,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-user"></i>
 							</span>
-							<span>Account</span>
+							<span>Cuenta</span>
 						</a>
 					</li>
 				</ul>
@@ -157,11 +157,11 @@
 			<div class="bread dash">
 				<div class="submenu">
 					<ul>
-						<li><a href="##" onClick="history.go(-1); return false;">Go Back</a></li>
+						<li><a href="##" onClick="history.go(-1); return false;">Retroceder</a></li>
 						
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href="estimatse.php">Estimates</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Order Now</span>
+				<h3><a style="text-decoration: none;" href="estimatse.php">Cotizaciones</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Order Now</span>
 			</div>
 			<!--Breadcrumb -->
 			
@@ -176,14 +176,14 @@
 					</span>
 					<form class="form-4" action="" method="post">
 						
-						Repair ID: <input type="text" name="rep_id" placeholder="Repair ID Isn't valid, redirecting..." value="<?php echo $repair; ?>" readonly>
+					ID de reparacion: <input type="text" name="rep_id" placeholder="Repair ID Isn't valid, redirecting..." value="<?php echo $repair; ?>" readonly>
 					    
 						<table>
 							<tr>
-								<th>Stock#</th>
-								<th>Quantity</th>
-								<th>Price</th>
-								<th>Items Price</th>
+								<th>Disponibilifaf#</th>
+								<th>Cantidad</th>
+								<th>Precio</th>
+								<th>Precio del elementos</th>
 							</tr>
 							<?php
 								$conn= mysqli_connect("localhost", "root", "", "compsys");
@@ -219,11 +219,11 @@
 								}
 							?>
 							<tr>
-								<td colspan="4"><h4>Total Price: <?php echo '&euro;'. $totalprice ?></h3></td>
+								<td colspan="4"><h4>Total a pagar: <?php echo '&euro;'. $totalprice ?></h3></td>
 							</tr>
 							
 						</table>
-						<input type="submit" name="order" value="Confirm Order">
+						<input type="submit" name="order" value="Confirmar Orden">
 						
 					</form>
 					

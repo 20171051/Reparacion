@@ -13,7 +13,7 @@
 		
 		// Check connection
 		if (!$conn) {
-			die("Connection failed: " . mysqli_connect_error());
+			die("Fallo de conexion: " . mysqli_connect_error());
 		}
 		
 		// To protect MySQL injection for Security purpose
@@ -31,7 +31,7 @@
 			$valid = mysqli_query($conn, $query);
 			
 			if (!$valid) {
-				$error = "Could not connect to the database!";
+				$error = "No se pudo conectar a la base de datos";
 			}
 			
 			if (mysqli_num_rows($valid) == 0 ) {
@@ -40,23 +40,23 @@
 				$res = mysqli_query($conn, $sql);
 				
 				if (!$res) {
-					$error = "Error adding....";
+					$error = "Error agregando....";
 				}
 				
 				if (mysqli_affected_rows($conn) == 1) {
-					$success =  "New item has been added successfully to the inventory. Redirecting.....";
+					$success =  "Un nuevo Elemento a sido agregado exitosamente al inventario. Redireccionando.....";
 					header("refresh:5; url=inventory.php");
 					
 					} else {
-					$error =  ("Could not add due to system error!");
+					$error =  ("¡No se pudo agregar debido a un error del sistema!");
 				}
 				
 				} else {
-				$error = "The item already exist in the system.";
+				$error = "El elemento ya existe en el sistema";
 			}
 			
 			} else {
-			$error = "Price should be numeric!";
+			$error = "El precio debe ser numerico!";
 		}
 		
 		mysqli_close($conn);

@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp" ng-app lang="en">
 	<head>
-		<title>PC Solutions - Inventory</title>
+	<title>Ausbert multiservice</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<meta charset="utf-8">
@@ -41,7 +41,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -90,7 +90,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-home"></i>
 							</span>
-							<span>Home</span>
+							<span>Inicio</span>
 						</a>
 					</li>
 					<li>
@@ -98,7 +98,7 @@
 							<span class="icon"> 
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
-							<span>Customers</span>
+							<span>Cliente</span>
 						</a>
 					</li>
 					<li>
@@ -106,7 +106,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
-							<span>Repairs</span>
+							<span>Reparaciones</span>
 						</a>
 					</li>
 					<li>
@@ -114,7 +114,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
 							</span>
-							<span>Estimates</span>
+							<span>Cotizaciones</span>
 						</a>
 					</li>
 					<li class="active">
@@ -122,7 +122,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>Inventory</span>
+							<span>Inventario</span>
 						</a>
 					</li>
 					<li>
@@ -130,7 +130,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-user"></i>
 							</span>
-							<span>Account</span>
+							<span>Cuenta</span>
 						</a>
 					</li>
 				</ul>
@@ -142,12 +142,12 @@
 			<div class="bread">
 				<div class="submenu">
 					<ul>
-						<li value="Update Inventory" onclick="showUpdate()">Update Inventory</li>
-						<li id="add"><a href="addInventory.php">Add New Item</a></li>
-						<li id="del" value="Delete Inventory" onclick="showDelete()">Delete Inventory Item</li>
+						<li value="Update Inventory" onclick="showUpdate()">Actualizar inventario</li>
+						<li id="add"><a href="addInventory.php">Agregar inventario</a></li>
+						<li id="del" value="Delete Inventory" onclick="showDelete()">Eliminar inventario</li>
 					</ul>
 				</div>
-				<h3>Inventory</h3>
+				<h3>Inventario</h3>
 			</div>
 			<!--Breadcrumb -->
 			
@@ -157,7 +157,7 @@
 					<div ng-controller="inventoryCrtl">
 						
 						<div class="row">
-							<div class="col-md-2">PageSize:
+							<div class="col-md-2">Tamaño de pagina:
 								<select ng-model="entryLimit" class="form-control">
 									<option>5</option>
 									<option>10</option>
@@ -166,12 +166,12 @@
 									<option>100</option>
 								</select>
 							</div>
-							<div class="col-md-3">Filter:
-								<input type="text" ng-model="search" ng-change="filter()" placeholder="Filter" class="form-control" />
+							<div class="col-md-3">Filtro:
+								<input type="text" ng-model="search" ng-change="filter()" placeholder="buscar.." class="form-control" />
 							</div>
-							<div class="col-md-4">
+							<!--<div class="col-md-4">
 								<p>Filtered {{ filtered.length }} of {{ totalItems}} total customers</p>
-							</div>
+							</div>-->
 						</div>
 						<br/>
 						<div class="row">
@@ -179,9 +179,9 @@
 								<table class="table table-striped table-bordered">
 									<thead>
 										<th>ID&nbsp;<a ng-click="sort_by('stock_id');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Description&nbsp;<a ng-click="sort_by('description');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Quantity&nbsp;<a ng-click="sort_by('quantity');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Price&nbsp;<a ng-click="sort_by('price');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<th>Descripcion&nbsp;<a ng-click="sort_by('description');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<th>Cantidad&nbsp;<a ng-click="sort_by('quantity');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<th>Precio&nbsp;<a ng-click="sort_by('price');"><i class="glyphicon glyphicon-sort"></i></a></th>
 									</thead>
 									<tbody>
 										<tr ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
@@ -195,7 +195,7 @@
 							</div>
 							<div class="col-md-12" ng-show="filteredItems == 0">
 								<div class="col-md-12">
-									<h4>No customers found</h4>
+									<h4>Cliente no encontrado</h4>
 								</div>
 							</div>
 							<div class="col-md-12" ng-show="filteredItems > 0">    
@@ -217,8 +217,8 @@
 				<div class="full-widget" id="updateDiv" style="display:none;">
 					
 					<form class="form-4" method="post" action="updateInventory.php">	
-						<p>Enter ID number:</p> <br>
-						<input type="number" name="record" placeholder="Enter stock number e.g. 1" min="1" maxlength="10" required>
+						<p>Ingresa el ID number:</p> <br>
+						<input type="number" name="record" placeholder="Introduzca un numero ej: 1" min="1" maxlength="10" required>
 						<input type="submit" name="go" value="Go to update >>">	
 					</form>
 					
@@ -226,9 +226,9 @@
 				
 				<div class="full-widget" id="deleteDiv" style="display:none;">
 					<form class="form-4" method="post" action="inventory.php">	
-						<p>Enter the Stock ID you want to delete: </p> <br>
-						<input type="number" name="stock_id" placeholder="Enter stock number e.g. 1" min="1" maxlength="10" required>
-						<input type="submit" name="delete" value="Click to Delete" >	
+						<p> ID del inventario a eliminar: </p> <br>
+						<input type="number" name="stock_id" placeholder="Introduzca un numero ej: 1" min="1" maxlength="10" required>
+						<input type="submit" name="delete" value="Eliminar" >	
 					</form>
 					
 				</div>

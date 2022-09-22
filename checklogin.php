@@ -21,14 +21,14 @@
 		$valid = mysqli_query($conn, $query);
 		
 		if (!$valid) {
-			$error = "Could not connect to the database!";
+			$error = "No se pudo conectar a la base de datos";
 		}
 		
 		if (mysqli_num_rows($valid) == 1 ) {	
 			$_SESSION['login_user'] = $username; // Initializing Session
 			header("location: dashboard.php"); // Redirecting To Other Page
 			} else {
-			$error = "Username or Password is invalid! Please re-enter...";
+			$error = "Usuario o contraseña invalido";
 		}
 		mysqli_close($conn); // Closing Connection
 	}
