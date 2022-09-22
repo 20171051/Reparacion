@@ -39,7 +39,7 @@
 			}
 			else
 			{
-				$success =  "<br><p><em>Repair details have been updated successfully! Redirecting....</em></p>";
+				$success =  "<br><p><em>Actualizacion exitosa! Redireccionando....</em></p>";
 				header("refresh:2; url=repairs.php");
 			}
 			
