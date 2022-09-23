@@ -50,7 +50,7 @@
 						
 						<ul class="clearfix">
 							<li class="login-user">
-								<a title="<?php echo $login_session; ?>" href="account.php">
+								<a title="<?php echo $login_session; ?>" href=a href="cuenta.php">
 									<span class="icon"><i aria-hidden="true" class="icon-user"></i></span>
 									<?php echo $login_session; ?>
 								</a>
@@ -93,7 +93,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="customer.php">
+						<a href="cliente.php">
 							<span class="icon"> 
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
@@ -125,7 +125,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="account.php">
+						<a href="cuenta.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-user"></i>
 							</span>

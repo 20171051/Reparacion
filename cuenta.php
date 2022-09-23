@@ -1,16 +1,15 @@
 <?php
 	require_once('session.php');
-	require_once('addNewCustomer.php');
 ?>
 
 <!DOCTYPE html>
 <html ng-app="myApp" ng-app lang="en">
 	<head>
-	<title>Ausbert multiservice-Clientes</title>
+		<title>Ausbert multiservice</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<meta charset="utf-8">
-		<meta name="description" content="Repair shop">
+		<meta name="description" content="Lakeside Books">
 		<meta name="keywords" content="books, lakeside, cork, shop, online">
 		
 		<link rel="shortcut icon" href="favicon.ico"> 
@@ -19,8 +18,14 @@
 		
 		<link rel="stylesheet" href="css/menu.css" />
 		<script src="js/modernizr.custom.js"></script>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<style type="text/css">
+			ul>li, a{cursor: pointer;}
+		</style>
 		
 		<style>@import url(http://fonts.googleapis.com/css?family=Raleway:400,700); </style>
+		
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 		
 	</head>
 	
@@ -35,7 +40,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<!--<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">-->
+							<!--<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente">-->
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -45,7 +50,7 @@
 						
 						<ul class="clearfix">
 							<li class="login-user">
-								<a title="<?php echo $login_session; ?>" href="#">
+								<a title="<?php echo $login_session; ?>" href=a href="cuenta.php">
 									<span class="icon"><i aria-hidden="true" class="icon-user"></i></span>
 									<?php echo $login_session; ?>
 								</a>
@@ -87,8 +92,8 @@
 							<span>Inicio</span>
 						</a>
 					</li>
-					<li class="active">
-						<a href="customer.php">
+					<li>
+						<a href="cliente.php">
 							<span class="icon"> 
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
@@ -96,7 +101,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<<a href="">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
@@ -111,7 +116,7 @@
 							<span>Cotizaciones</span>
 						</a>
 					</li>
-					<li>
+					<!--<li>
 						<a href="inventory.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
@@ -119,8 +124,8 @@
 							<span>Inventario</span>
 						</a>
 					</li>-->
-					<li>
-						<a href="account.php">
+					<li class="active">
+						<a href="cuenta.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-user"></i>
 							</span>
@@ -133,52 +138,65 @@
 			
 			
 			<!--Breadcrumb -->
-			<div class="bread dash">
+			<div class="bread">
 				<div class="submenu">
 					<ul>
-						<li><a href="##" onClick="history.go(-1); return false;">Retroceder</a></li>
-						<li id="add"><a href="addCustomer.php">Agregar cliente</a></li>
+						<li id="back" value="Update Inventory">Actualizar</li>
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href="customer.php">Clientes</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Agregar Cliente </span>
+				<h3>Cuenta</h3>
 			</div>
 			<!--Breadcrumb -->
 			
 			
 			<div class="floats">
-				<div class="full-widget">		
-					
-					<form class="form-4" action="" method="post">
-						<h1>Registrar Nuevo Cliente </h1>
-						<span id="msg">
-							<?php 
-								echo $success; 
-								echo $error;
-							?>
-						</span>
-						<input type="text" name="forename" placeholder="Nombre" required>
-						<input type="text" name="surname" placeholder="Apellido" required>
-		
+				<div class=" full-widget">
+					<?php
+						$staff = '';
+						$conn= mysqli_connect("localhost", "root", "", "compsys");
+						if (!$conn) {
+							die("Connection failed: " . mysqli_connect_error());
+						}
 						
-						<input type="text" name="town" placeholder="Direccion" required>
+						$query = "SELECT * FROM staff WHERE staff_id = $login_id";
 						
-						<input type="text" name="county" placeholder="cedula" required>
+						$result= mysqli_query($conn, $query);
 						
-						<input type="text" name="telephone" placeholder="Telefono" required>
-						<input type="submit" name="submit" value="Agregar">
-					</form>
-					
-				</div>
+						if (!$result) {
+							$error = "Could not connect to the database!";
+						}
+						
+						if(mysqli_num_rows($result) == 0) {
+							$error = "<ul> <li>Sorry, your search query (\"" .$name ."\") did not find any results!</li></ul>";
+						}
+						//-create  while loop and loop through result set
+						while($row = mysqli_fetch_array($result)){
+							$ID = $row['staff_id'];
+							$firstname  =$row['forename'];
+							$lastname=$row['surname'];
+							$town = $row['town'];
+							$county = $row['county'];
+							$tel = $row ['tel'];
+							
+							//-display the result of the array
+							$staff = "<ul><h1><li> Nombre: " .$firstname . "</li><li> Apellido: " . $lastname .  "</li><li>Direccion:  "   .$town . "</li><li>Cedula:  "   .$county . "</li><li> Telefono: "   .$tel . "</li></h1></ul>";
+							echo $staff;
+						}
+						mysqli_close($conn);
+
+				?>
 				
 			</div> 
-			<!-- END OF FLOATS-->
-		</div>
-		<!-- END OF MAIN-->
-		
-		<!-- SCRIPT FOR THE MENU -->
-		<script src="js/menu.js"></script>
-		<!-- SCRIPT FOR THE MENU -->
-		
-	</body>
+			<!-- END OF FULL WIDGET-->
+		</div> 
+		<!-- END OF FLOATS-->
+	</div>
+	<!-- END OF MAIN-->
 	
-</html> 								
+	<!-- SCRIPT FOR THE MENU -->
+	<script src="js/menu.js"></script>
+	<!-- SCRIPT FOR THE MENU --> 
+	
+</body>
+
+</html>

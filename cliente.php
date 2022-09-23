@@ -49,7 +49,7 @@
 						
 						<ul class="clearfix">
 							<li class="login-user">
-								<a title="<?php echo $login_session; ?>" href="account.php">
+								<a title="<?php echo $login_session; ?>" href=a href="cuenta.php">
 									<span class="icon"><i aria-hidden="true" class="icon-user"></i></span>
 									<?php echo $login_session; ?>
 								</a>
@@ -124,7 +124,7 @@
 						</a>
 					</li>-->
 					<li>
-						<a href="account.php">
+						<a href="cuenta.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-user"></i>
 							</span>
@@ -143,7 +143,7 @@
 				<div class="submenu">
 					<ul>
 						<li id="update" value="Update Customer" >Actualizar cliente</li>
-						<li id="add"><a href="addCustomer.php">Agregar Cliente</a></li>
+						<li id="add"><a href="agregarcliente.php">Agregar Cliente</a></li>
 					</ul>
 				</div>
 				<h3>Clientes</h3>

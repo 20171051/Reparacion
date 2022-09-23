@@ -89,7 +89,7 @@
 						</a>
 					</li>
 					<li class="active">
-						<a href="customer.php">
+						<a href="cliente.php">
 							<span class="icon"> 
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
@@ -104,7 +104,7 @@
 							<span>Reparaciones</span>
 						</a>
 					</li>
-					<li>
+					<!--<li>
 						<a href="#">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
@@ -119,9 +119,9 @@
 							</span>
 							<span>Inventario</span>
 						</a>
-					</li>
+					</li>-->
 					<li>
-						<a href="account.php">
+						<a href="cuenta.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-user"></i>
 							</span>
@@ -138,10 +138,10 @@
 				<div class="submenu">
 					<ul>
 						<li><a href="##" onClick="history.go(-1); return false;">Retroceder</a></li>
-						<li id="add"><a href="addCustomer.php">Agregar cliente</a></li>
+						<li id="add"><a href="agregarcliente.php">Agregar cliente</a></li>
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href="customer.php">Cliente</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Actualizar</span>
+				<h3><a style="text-decoration: none;" href=a href="cliente.php">Cliente</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Actualizar</span>
 			</div>
 			<!--Breadcrumb -->
 			

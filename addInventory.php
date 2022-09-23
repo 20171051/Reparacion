@@ -88,7 +88,7 @@
 						</a>
 					</li>
 					<li class="active">
-						<a href="customer.php">
+						<a href="cliente.php">
 							<span class="icon"> 
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
@@ -120,7 +120,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="account.php">
+						<a href="cuenta.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-user"></i>
 							</span>

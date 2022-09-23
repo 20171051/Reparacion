@@ -4,9 +4,10 @@ html {
 }
 
 body {
-	background-image: url(../images/body-bg.jpg);
-	background-color: #4a4d4a;
-	font-family: 'Raleway', 'Lato', Arial, sans-serif;
+	background-image: url(../images/fondo.svg);
+	/*background-image: url(../images/body-bg.jpg);*/
+	background-color: #4a4d4a; 
+	/* font-family: 'Raleway', 'Lato', Arial, sans-serif; */
 	font-size: 1.6em;
 }
 
@@ -78,12 +79,12 @@ p {
 /*********************************************************************
 Start Header */
 #header-wrapper {
-	background: #634056;
+	background: #1F78B0;
 	border-bottom: #000 1px solid;
 }
 
 #top-bar {
-	border-bottom: #634056 1px solid;
+	border-bottom: #1F78B0 1px solid;
 	min-height: 55px;
 }
 
@@ -392,8 +393,8 @@ Start Header */
 
 .form-4 {
     /* Size and position */
-    width: 70%;
-    margin: 30px auto 30px;
+    width: 300px;
+    margin: -2px auto 0px;
     padding: 10px;
     position: relative;
 	
