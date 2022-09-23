@@ -36,7 +36,7 @@
 					<!-- Barra de busqueda por http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">
+							<!--<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">-->
 						</form>
 					</div>
 					
@@ -156,8 +156,9 @@
 					</span>
 					<form class="form-4" action="" method="post">
 						ID del cliente: <input type="text" name="ud_id" value="<?php echo $id; ?>" readonly>
-						Nombre <input type="text" name="ud_surname" value="<?php echo $surname; ?>"><br />
-						Apellido: <input type="text" name="ud_forename" value="<?php echo $forename; ?>"><br />
+						
+						Nombre:  <input type="text" name="ud_forename" value="<?php echo $forename; ?>"><br />
+						Apellido:<input type="text" name="ud_surname" value="<?php echo $surname; ?>"><br />
 						Dirección: <input type="text" name="ud_town" value="<?php echo $town; ?>"><br />
 						Cedula: <input type="text" name="ud_county" value="<?php echo $county; ?>"><br />
 						Telefono: <input type="text" name="ud_tel" value="<?php echo $tel; ?>"><br />

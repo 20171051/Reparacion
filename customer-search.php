@@ -36,7 +36,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">
+							<!--<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">-->
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->

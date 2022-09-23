@@ -40,7 +40,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente">
+							<!--<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente">-->
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -61,7 +61,7 @@
 							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
 							<p>
 								<a href="logout.php" title="Sign out">
-									<span>Sign-out</span>
+									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
 									</span>
@@ -101,14 +101,14 @@
 						</a>
 					</li>
 					<li>
-						<a href="repairs.php">
+						<<a href="">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
 							<span>Reparaciones</span>
 						</a>
 					</li>
-					<li>
+					<!--<li>
 						<a href="estimates.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
@@ -116,14 +116,14 @@
 							<span>Cotizaciones</span>
 						</a>
 					</li>
-					<li>
+					<!--<li>
 						<a href="inventory.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
 							<span>Inventario</span>
 						</a>
-					</li>
+					</li>-->
 					<li class="active">
 						<a href="account.php">
 							<span class="icon">
@@ -179,7 +179,7 @@
 							$tel = $row ['tel'];
 							
 							//-display the result of the array
-							$staff = "<ul><h1><li> Nombre: " .$firstname . " Apellido" . $lastname .  "</li><li>Direccion:  "   .$town . "</li>Cedula<li> "   .$county . "</li><li> Telefono: "   .$tel . "</li></h1></ul>";
+							$staff = "<ul><h1><li> Nombre: " .$firstname . "</li><li> Apellido: " . $lastname .  "</li><li>Direccion:  "   .$town . "</li><li>Cedula:  "   .$county . "</li><li> Telefono: "   .$tel . "</li></h1></ul>";
 							echo $staff;
 						}
 						mysqli_close($conn);

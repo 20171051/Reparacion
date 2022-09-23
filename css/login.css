@@ -204,6 +204,9 @@
 img {
 	padding: 25px 0 0 55px;
 }
+.logos-login{
+    padding: 20px 5 0 20px !important;
+}
 
 #error {
    color: red;

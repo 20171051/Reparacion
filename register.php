@@ -21,7 +21,7 @@
 	<body>
 		<div class="container">
 			<div class="rect reg">
-				<img src="images/logo.png" width="150" height="150" >
+				<img  class="logos-login" src="images/logo01.png" width="150" height="150" >
 				<form class="form-4" method="POST" action="">
 					<h1>Registro/ <span class="reg"><a href="index.php">Login</a></span></h1>
 						<span id="error"><?php echo $error; ?></span>
