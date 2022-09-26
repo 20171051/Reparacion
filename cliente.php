@@ -57,7 +57,7 @@
 						</ul>
 						
 						<div class="log-out">
-						<p><a title="Sign out" href="#">Sign out</a></p> 
+						
 							<p>
 								<a href="logout.php" title="Salir">
 									<span>Salir</span>
@@ -103,7 +103,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="">
+					<a href="repairs.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
