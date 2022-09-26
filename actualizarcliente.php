@@ -56,7 +56,7 @@
 						<div class="log-out">
 							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
 							<p>
-								<a href="logout.php" title="Sign out">
+								<a href="logout.php" title="Salir">
 									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
@@ -97,7 +97,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="repairs.php">
+						<a href="">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
@@ -141,7 +141,7 @@
 						<li id="add"><a href="agregarcliente.php">Agregar cliente</a></li>
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href=a href="cliente.php">Cliente</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Actualizar</span>
+				<h3><a style="text-decoration: none;" >Cliente</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Actualizar</span>
 			</div>
 			<!--Breadcrumb -->
 			
@@ -156,9 +156,9 @@
 					</span>
 					<form class="form-4" action="" method="post">
 						ID del cliente: <input type="text" name="ud_id" value="<?php echo $id; ?>" readonly>
+						Nombre<input type="text" name="ud_surname" value="<?php echo $surname; ?>"><br />
+						Apellido <input type="text" name="ud_forename" value="<?php echo $forename; ?>"><br />
 						
-						Nombre:  <input type="text" name="ud_forename" value="<?php echo $forename; ?>"><br />
-						Apellido:<input type="text" name="ud_surname" value="<?php echo $surname; ?>"><br />
 						Dirección: <input type="text" name="ud_town" value="<?php echo $town; ?>"><br />
 						Cedula: <input type="text" name="ud_county" value="<?php echo $county; ?>"><br />
 						Telefono: <input type="text" name="ud_tel" value="<?php echo $tel; ?>"><br />

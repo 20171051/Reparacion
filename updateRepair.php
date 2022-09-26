@@ -108,7 +108,7 @@
 					<li>
 						<a href="#">
 							<span class="icon">
-								<i aria-hidden="true" class="icon-sigma"></i>
+							<i aria-hidden="true" class="icon-coin"></i>
 							</span>
 							<span>Cotizaciones</span>
 						</a>
@@ -122,11 +122,12 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="cuentas.php">
 							<span class="icon">
-								<i aria-hidden="true" class="icon-coin"></i>
+								<!-- <i aria-hidden="true" class="icon-coin"></i> -->
+								<i aria-hidden="true" class="icon-user"></i>
 							</span>
-							<span>Facturas</span>
+							<span>Cuentas</span>
 						</a>
 					</li>
 				</ul>

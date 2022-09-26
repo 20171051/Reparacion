@@ -32,10 +32,10 @@
 				
 				<div id="top-bar-inner">
 					
-					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
+					<!--BARRA DE BUSQUEDA-->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<!--<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">-->
+							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -55,7 +55,7 @@
 						<div class="log-out">
 							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
 							<p>
-								<a href="logout.php" title="Sign out">
+								<a href="logout.php" title="Salir">
 									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
@@ -76,7 +76,7 @@
 		
 		<div class="main clearfix">
 			
-			<!-- START OF NAVIGATION -->
+			<!-- INICIO DEL MENU-->
 			<nav id="menu" class="nav">					
 				<ul>
 					<li class="active">
@@ -103,22 +103,23 @@
 							<span>Reparaciones</span>
 						</a>
 					</li>
-					<!--<li>
+					<li>
 						<a href="estimates.php">
 							<span class="icon">
-								<i aria-hidden="true" class="icon-sigma"></i>
+								<!-- <i aria-hidden="true" class="icon-sigma"></i> -->
+								<i aria-hidden="true" class="icon-coin"></i>
 							</span>
 							<span>Cotizaciones</span>
 						</a>
-					</li>-->
-					<!--<li>
+					</li>
+					<li>
 						<a href="inventory.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
 							<span>Inventario</span>
 						</a>
-					</li>-->
+					</li>
 					<li>
 						<a href="cuenta.php">
 							<span class="icon">
@@ -129,7 +130,7 @@
 					</li>
 				</ul>
 			</nav>
-			<!-- END OF NAVIGATION -->
+			<!-- FINAL MENU-->
 			
 			
 			<!--Breadcrumb -->
@@ -139,7 +140,7 @@
 			
 			<div class="floats">
 				
-				<!-- Easy access links -->
+				<!-- Acceso rapidos -->
 				<div class="widget-content small-widget">
 					
 					<ul>
@@ -154,7 +155,7 @@
 						</li>
 						
 						<li>
-							<!-- <a href="addRepair.php">-->
+							 <a href="addRepair.php">
 								<span class="icon"> 
 									<i aria-hidden="true" class="icon-plus"></i>
 								</span>
@@ -163,7 +164,7 @@
 						</li>
 						
 						<li>
-							<a href="chooseProducts.php">
+							<a href="#">
 								<span class="icon"> 
 									<i aria-hidden="true" class="icon-plus"></i>
 								</span>
@@ -176,7 +177,7 @@
 								<span class="icon"> 
 									<i aria-hidden="true" class="icon-plus"></i>
 								</span>
-								<span>Agregar un servicio</span>
+								<span>Agregar un servicio y productos</span>
 							</a>
 						</li>
 						
@@ -198,7 +199,7 @@
 		</div>
 		
 		
-		<!-- SCRIPT FOR THE MENU -->
+		<!-- SCRIPT del  MENU -->
 		<script src="js/menu.js"></script>
 		<!-- SCRIPT FOR THE MENU -->
 		

@@ -34,13 +34,13 @@
 			//echo $res;
 			if(mysqli_affected_rows($dbcnx)< 1){
 				
-				$error = "<br><br><p><em>No actualizaste nada! Redireccionando....</em></p>";  
-				header("refresh:2; url=customer.php");
+				$error = "<br><br><p><em>No actualizaste nada!....</em></p>";  
+				header("refresh:2; url=cliente.php");
 			}
 			else
 			{
-				$success =  "<br><p><em>Se ha actualizado la información del cliente! Redireccionando....</em></p>";
-				header("refresh:2; url=customer.php");
+				$success =  "<br><p><em>Se ha actualizado la información del cliente!....</em></p>";
+				header("refresh:2; url=cliente.php");
 			}
 			
 			

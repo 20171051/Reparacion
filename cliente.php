@@ -39,7 +39,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<!--<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">-->
+							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -57,9 +57,9 @@
 						</ul>
 						
 						<div class="log-out">
-							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
+						<p><a title="Sign out" href="#">Sign out</a></p> 
 							<p>
-								<a href="logout.php" title="Sign out">
+								<a href="logout.php" title="Salir">
 									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
@@ -78,21 +78,24 @@
 		<!-- END Header -->
 		
 		
-		<div class="main clearfix">
+
+		
+			<div class="main clearfix">
 			
 			<!-- START OF NAVIGATION -->
 			<nav id="menu" class="nav">					
 				<ul>
-					<li>
-						<a href="dashboard.php">
+					<li >
+					<a href="dashboard.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-home"></i>
 							</span>
 							<span>Inicio</span>
 						</a>
 					</li>
+				
 					<li class="active">
-						<a href="#">
+						<a href="cliente.php">
 							<span class="icon"> 
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
@@ -108,33 +111,34 @@
 						</a>
 					</li>
 					<li>
-					<!--	<a href="estimates.php">
+						<a href="estimates.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
 							</span>
 							<span>Cotizaciones</span>
 						</a>
-					</li>-->
-				<!--	<li>
+					</li>
+					<li>
 						<a href="inventory.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>inventario</span>
+							<span>Inventario</span>
 						</a>
-					</li>-->
+					</li>
 					<li>
 						<a href="cuenta.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-user"></i>
 							</span>
 							<span>Cuenta</span>
-							
-						</a>
-						</a>
+							</a>
+												</a>
 					</li>
 				</ul>
 			</nav>
+			
+			
 			<!-- END OF NAVIGATION -->
 			
 			
@@ -153,7 +157,7 @@
 			
 			<div class="floats">
 				<div class="full-widget" id="searchDiv" style="display:none;">
-					<form class="form-4" method="post" action="updateCustomer.php">	
+					<form class="form-4" method="post" action="actualizarcliente.php">	
 						<p>Ingresa el ID del cliente:</p> <br>
 						<input type="number" name="record" placeholder="Ingresa un ID" min="1" maxlength="10" autofocus required>
 						<input type="submit" name="go" value="Actualizar >>">	

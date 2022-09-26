@@ -55,7 +55,7 @@
 						<div class="log-out">
 							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
 							<p>
-								<a href="logout.php" title="Sign out">
+								<a href="logout.php" title="Salir">
 									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
@@ -140,7 +140,7 @@
 						<li id="add"><a href="agregarcliente.php">Agregar cliente</a></li>
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href=a href="cliente.php">Clientes</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Agregar Cliente </span>
+				<h3><a style="text-decoration: none;" ">Clientes</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Agregar Cliente </span>
 			</div>
 			<!--Breadcrumb -->
 			

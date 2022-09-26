@@ -110,7 +110,7 @@
 					<li>
 						<a href="#">
 							<span class="icon">
-								<i aria-hidden="true" class="icon-sigma"></i>
+							<i aria-hidden="true" class="icon-coin"></i>
 							</span>
 							<span>Estimates</span>
 						</a>
@@ -166,9 +166,9 @@
 							<div class="col-md-3">Filtro:
 								<input type="text" ng-model="search" ng-change="filter()" placeholder="Filter" class="form-control" />
 							</div>
-							<div class="col-md-4">
+							<!-- <div class="col-md-4">
 								<p>Filtro {{ filtered.length }} de {{ totalItems}}  total de clientes </p>
-							</div>
+							</div> -->
 						</div>
 						<br/>
 						<div class="row">
@@ -212,7 +212,7 @@
 						<form class="form-4" method="post" action="addRepairForm.php">	
 							<p>Ingrese el ID del cliente para continuar con el registro del equipo:</p> <br>
 							<input type="number" name="record" placeholder="Introduzca un numero ej: 1" min="1" maxlength="10" required>
-							<input type="submit" name="go" value="Go to repair form >>">	
+							<input type="submit" name="go" value="Agregar >>">	
 						</form>
 					</div>
 					

@@ -40,7 +40,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<!--<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente">-->
+							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -58,9 +58,9 @@
 						</ul>
 						
 						<div class="log-out">
-							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
+						<p><a title="Sign out" href="#">Sign out</a></p>
 							<p>
-								<a href="logout.php" title="Sign out">
+								<a href="logout.php" title="salir">
 									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
@@ -101,14 +101,14 @@
 						</a>
 					</li>
 					<li>
-						<<a href="">
+						<<a href="reparaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
 							<span>Reparaciones</span>
 						</a>
 					</li>
-					<!--<li>
+					<li>
 						<a href="estimates.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
@@ -116,14 +116,14 @@
 							<span>Cotizaciones</span>
 						</a>
 					</li>
-					<!--<li>
+				<li>
 						<a href="inventory.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
 							<span>Inventario</span>
 						</a>
-					</li>-->
+					</li>
 					<li class="active">
 						<a href="cuenta.php">
 							<span class="icon">
@@ -155,7 +155,7 @@
 						$staff = '';
 						$conn= mysqli_connect("localhost", "root", "", "compsys");
 						if (!$conn) {
-							die("Connection failed: " . mysqli_connect_error());
+							die("Conexion fallida: " . mysqli_connect_error());
 						}
 						
 						$query = "SELECT * FROM staff WHERE staff_id = $login_id";
@@ -163,11 +163,11 @@
 						$result= mysqli_query($conn, $query);
 						
 						if (!$result) {
-							$error = "Could not connect to the database!";
+							$error = "No se pudo conectar a la base datos!";
 						}
 						
 						if(mysqli_num_rows($result) == 0) {
-							$error = "<ul> <li>Sorry, your search query (\"" .$name ."\") did not find any results!</li></ul>";
+							$error = "<ul> <li>Perdon no se encontro el resultado de:  (\"" .$name ."\") </li></ul>";
 						}
 						//-create  while loop and loop through result set
 						while($row = mysqli_fetch_array($result)){

@@ -51,7 +51,7 @@
 				
 				if (mysqli_affected_rows($conn) == 1) {
 					$success =  "Cliente registrado con éxito!";
-					header("refresh:5; url=customer.php");
+					header("refresh:5; url=cliente.php");
 					
 					} else {
 					$error =  ("
