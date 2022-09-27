@@ -26,7 +26,7 @@
 	</head>
 	
 	<body id="top" style="font-size: 62.5%;">
-		<!-- Comienzo de cabeza-->
+		<!-- Comienzo del header-->
 		<header id="header-wrapper">
 			
 			<div id="top-bar" class="clearfix">
@@ -36,7 +36,7 @@
 					<!-- Barra de busqueda por http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<!--<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">-->
+						<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">
 						</form>
 					</div>
 					
@@ -72,12 +72,12 @@
 			
 			
 		</header>
-		<!-- END Header -->
+		<!-- final del Header -->
 		
 		
 		<div class="main clearfix">
 			
-			<!-- START OF NAVIGATION -->
+			<!-- Inicio del menu -->
 			<nav id="menu" class="nav">					
 				<ul>
 					<li>
@@ -97,15 +97,15 @@
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a href="reparaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
 							<span>Reparaciones</span>
 						</a>
 					</li>
-					<!--<li>
-						<a href="#">
+				<li>
+						<a href="cotizaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
 							</span>
@@ -113,13 +113,13 @@
 						</a>
 					</li>
 					<li>
-						<a href="inventory.php">
+						<a href="servicios.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>Inventario</span>
+							<span>Servicios</span>
 						</a>
-					</li>-->
+					</li>
 					<li>
 						<a href="cuenta.php">
 							<span class="icon">
@@ -130,10 +130,10 @@
 					</li>
 				</ul>
 			</nav>
-			<!-- END OF NAVIGATION -->
+			<!-- final del menu -->
 			
 			
-			<!--Breadcrumb -->
+			<!--Opciones-->
 			<div class="bread dash">
 				<div class="submenu">
 					<ul>
@@ -143,7 +143,7 @@
 				</div>
 				<h3><a style="text-decoration: none;" >Cliente</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Actualizar</span>
 			</div>
-			<!--Breadcrumb -->
+			<!--ocpiones-->
 			
 			
 			<div class="floats">
@@ -168,13 +168,13 @@
 				</div>
 				
 			</div> 
-			<!-- END OF FLOATS-->
+			<!-- Final de los FLOATS-->
 		</div>
 		<!-- END OF MAIN-->
 		
-		<!-- SCRIPT FOR THE MENU -->
+		<!-- SCRIPT del menu  -->
 		<script src="js/menu.js"></script>
-		<!-- SCRIPT FOR THE MENU -->
+		<!-- SCRIPT del menu -->
 		
 	</body>
 	

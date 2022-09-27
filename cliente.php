@@ -29,7 +29,7 @@
 	</head>
 	
 	<body id="top" style="font-size: 62.5%;">
-		<!-- BEGIN Header -->
+		<!-- Comienzo del Header -->
 		<header id="header-wrapper">
 			
 			<div id="top-bar" class="clearfix">
