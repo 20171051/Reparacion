@@ -110,9 +110,9 @@
 						</a>
 					</li>
 					<li>
-						<a href="estimates.php">
+						<a href="cotizaciones.php">
 							<span class="icon">
-								<i aria-hidden="true" class="icon-sigma"></i>
+								<i aria-hidden="true" class="icon-coin"></i>
 							</span>
 							<span>Cotizaciones</span>
 						</a>
@@ -122,7 +122,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>Inventario</span>
+							<span>Servicios</span>
 						</a>
 					</li>
 					<li>
@@ -138,7 +138,7 @@
 			<!-- END OF NAVIGATION -->
 			
 			
-			<!--Breadcrumb -->
+			<!--Accesorios -->
 			<div class="bread">
 				<div class="submenu">
 					<ul>
@@ -147,9 +147,9 @@
 						<li id="del" value="Delete Inventory" onclick="showDelete()">Eliminar inventario</li>
 					</ul>
 				</div>
-				<h3>Inventario</h3>
+				<h3>Servicios</h3>
 			</div>
-			<!--Breadcrumb -->
+			<!--Accesorios -->
 			
 			
 			<div class="floats">
@@ -210,16 +210,16 @@
 							?>
 						</span>
 					</div> 
-					<!-- END OF CUSTOMERS LIST-->	
+					<!-- Final de lista de clientes-->	
 				</div> 
-				<!-- END OF FULL WIDGET-->
+				<!-- final del widget-->
 				
 				<div class="full-widget" id="updateDiv" style="display:none;">
 					
 					<form class="form-4" method="post" action="updateInventory.php">	
 						<p>Ingresa el ID number:</p> <br>
 						<input type="number" name="record" placeholder="Introduzca un numero ej: 1" min="1" maxlength="10" required>
-						<input type="submit" name="go" value="Go to update >>">	
+						<input type="submit" name="go" value="Actualizar >>">	
 					</form>
 					
 				</div>

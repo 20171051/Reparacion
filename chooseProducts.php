@@ -110,19 +110,19 @@
 						</a>
 					</li>
 					<li class="active">
-						<a href="estimates.php">
+						<a href="cotizaciones.php">
 							<span class="icon">
-								<i aria-hidden="true" class="icon-sigma"></i>
+								<i aria-hidden="true" class="icon-coin"></i>
 							</span>
 							<span>Cotizaciones</span>
 						</a>
 					</li>
 					<li>
-						<a href="inventory.php">
+						<a href="servicios.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>Inventario</span>
+							<span>Servicios</span>
 						</a>
 					</li>
 					<li>
@@ -138,17 +138,17 @@
 			<!-- END OF NAVIGATION -->
 			
 			
-			<!--Breadcrumb -->
+			<!--Accesorios -->
 			<div class="bread">
 				<div class="submenu">
 					<ul>
-						<li><a href="estimates.php">Retroceder</a></li>
+						<li><a href="cotizaciones.php">Retroceder</a></li>
 						<li id="add"><a href="chooseRepair.php">Ordena ahora</a></li>
 					</ul>
 				</div>
 				<h3>Elige el producto</h3>
 			</div>
-			<!--Breadcrumb -->
+			<!--Accesorios -->
 			
 			
 			<div class="floats">

@@ -58,7 +58,7 @@
 						</ul>
 						
 						<div class="log-out">
-						<p><a title="Sign out" href="#">Sign out</a></p>
+						
 							<p>
 								<a href="logout.php" title="salir">
 									<span>Salir</span>
@@ -109,19 +109,19 @@
 						</a>
 					</li>
 					<li>
-						<a href="estimates.php">
+						<a href="cotizaciones.php">
 							<span class="icon">
-								<i aria-hidden="true" class="icon-sigma"></i>
+								<i aria-hidden="true" class="icon-coin"></i>
 							</span>
 							<span>Cotizaciones</span>
 						</a>
 					</li>
 				<li>
-						<a href="inventory.php">
+						<a href="servicios.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>Inventario</span>
+							<span>Servicios</span>
 						</a>
 					</li>
 					<li class="active">
@@ -137,7 +137,7 @@
 			<!-- END OF NAVIGATION -->
 			
 			
-			<!--Breadcrumb -->
+			<!--Accesorios -->
 			<div class="bread">
 				<div class="submenu">
 					<ul>
@@ -146,7 +146,7 @@
 				</div>
 				<h3>Cuenta</h3>
 			</div>
-			<!--Breadcrumb -->
+			<!--Accesorios -->
 			
 			
 			<div class="floats">
@@ -167,7 +167,7 @@
 						}
 						
 						if(mysqli_num_rows($result) == 0) {
-							$error = "<ul> <li>Perdon no se encontro el resultado de:  (\"" .$name ."\") </li></ul>";
+							$error = "<ul> <li>No se encontro el resultado de:  (\"" .$name ."\") </li></ul>";
 						}
 						//-create  while loop and loop through result set
 						while($row = mysqli_fetch_array($result)){

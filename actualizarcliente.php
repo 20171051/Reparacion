@@ -107,7 +107,7 @@
 				<li>
 						<a href="cotizaciones.php">
 							<span class="icon">
-								<i aria-hidden="true" class="icon-sigma"></i>
+								<i aria-hidden="true" class="icon-coin"></i>
 							</span>
 							<span>Cotizaciones</span>
 						</a>
@@ -170,7 +170,7 @@
 			</div> 
 			<!-- Final de los FLOATS-->
 		</div>
-		<!-- END OF MAIN-->
+	
 		
 		<!-- SCRIPT del menu  -->
 		<script src="js/menu.js"></script>

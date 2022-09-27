@@ -104,19 +104,19 @@
 						</a>
 					</li>
 					<li>
-						<a href="estimates.php">
+						<a href="cotizaciones.php">
 							<span class="icon">
-								<i aria-hidden="true" class="icon-sigma"></i>
+								<i aria-hidden="true" class="icon-coin"></i>
 							</span>
 							<span>Cotizaciones</span>
 						</a>
 					</li>
 					<li>
-						<a href="inventory.php">
+						<a href="servicios.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>Inventario</span>
+							<span>Servicios</span>
 						</a>
 					</li>
 					<li>
@@ -132,7 +132,7 @@
 			<!-- END OF NAVIGATION -->
 			
 			
-			<!--Breadcrumb -->
+			<!--Accesorios -->
 			<div class="bread dash">
 				<div class="submenu">
 					<ul>
@@ -142,7 +142,7 @@
 				</div>
 				<h3><a style="text-decoration: none;" href="inventory.php">Inventario</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Add New Item</span>
 			</div>
-			<!--Breadcrumb -->
+			<!--Accesorios -->
 			
 			
 			<div class="floats">
@@ -167,7 +167,7 @@
 			</div> 
 			<!-- END OF FLOATS-->
 		</div>
-		<!-- END OF MAIN-->
+
 		
 		<!-- SCRIPT FOR THE MENU -->
 		<script src="js/menu.js"></script>
