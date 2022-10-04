@@ -142,9 +142,9 @@
 			<div class="bread">
 				<div class="submenu">
 					<ul>
-						<li value="Update Inventory" onclick="showUpdate()">Actualizar inventario</li>
-						<li id="add"><a href="addInventory.php">Agregar inventario</a></li>
-						<li id="del" value="Delete Inventory" onclick="showDelete()">Eliminar inventario</li>
+						<li id="Update Inventory" value="Update Inventory" onclick="showUpdate()">Actualizar Servicios</li>
+						<li id="add"><a href="addInventory.php">Agregar servicios</a></li>
+						<li id="del" value="Delete Inventory" onclick="showDelete()">Eliminar Servicios</li>
 					</ul>
 				</div>
 				<h3>Servicios</h3>
@@ -212,18 +212,29 @@
 					</div> 
 					<!-- Final de lista de clientes-->	
 				</div> 
+
 				<!-- final del widget-->
 				
-				<div class="full-widget" id="updateDiv" style="display:none;">
+			<div class="floats">
+				<div class="full-widget" id="searchDiv" style="display:none;">
+					
+					<form class="form-4" method="post" action="updateRepair.php">	
+						<p>Ingresa el ID del equipo:</p> <br>
+						<input type="number" name="record" placeholder="Introduzca un numero ej: 1" min="1" maxlength="10" required>
+						<input type="submit" name="go" value="Actualizar >>">	
+						</form>
+					
+				</div>
+				 <div class="full-widget" id="updateDiv" style="display:none;">
 					
 					<form class="form-4" method="post" action="updateInventory.php">	
-						<p>Ingresa el ID number:</p> <br>
+						<p>Ingresa el ID del inventario:</p> <br>
 						<input type="number" name="record" placeholder="Introduzca un numero ej: 1" min="1" maxlength="10" required>
 						<input type="submit" name="go" value="Actualizar >>">	
 					</form>
 					
 				</div>
-				
+				-->	
 				<div class="full-widget" id="deleteDiv" style="display:none;">
 					<form class="form-4" method="post" action="servicios.php">	
 						<p> ID del inventario a eliminar: </p> <br>

@@ -154,7 +154,7 @@
 				<div class="full-widget" id="searchDiv" style="display:none;">
 					
 					<form class="form-4" method="post" action="updateRepair.php">	
-						<p>Enter Repair ID number:</p> <br>
+						<p>Ingresa el ID del equipo:</p> <br>
 						<input type="number" name="record" placeholder="Introduzca un numero ej: 1" min="1" maxlength="10" required>
 						<input type="submit" name="go" value="Actualizar >>">	
 						</form>
