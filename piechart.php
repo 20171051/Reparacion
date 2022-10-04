@@ -48,7 +48,7 @@
 			]);
 			
 			var options = {
-				title: '<?php echo "FROM " .date('01 F Y')  ." until " .date('h:i:s a', time()) ." NOW."?>',
+				title: '<?php echo "Desde "  .date('D F Y') ." Hasta " .date('h:i:s a', time()) ." de ahora"?>',
 				is3D: 'true',
 				pieSliceText: 'value',
 				slices: {  7: {offset: 0.2},
@@ -58,7 +58,7 @@
 			};
 			// Create and draw the visualization.
 			new google.visualization.PieChart(document.getElementById('pie_chart')).
-			// {title:"<?php echo "FROM " .date('01 F Y')  ." until " .date('h:i:s a', time()) ." NOW."?>"}
+			// {title:"<?php echo "Desde " .date('01 F Y')  ." hasta " .date('h:i:s a', time()) ." de ahora."?>"}
 			draw(data, options);
 		}
 		

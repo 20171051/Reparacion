@@ -77,7 +77,7 @@
 		
 		<div class="main clearfix">
 			
-			<!-- START OF NAVIGATION -->
+			<!-- Inicio menu -->
 			<nav id="menu" class="nav">					
 				<ul>
 					<li>
@@ -97,7 +97,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="repairs.php">
+						<a href="reparaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
@@ -109,7 +109,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-coin"></i>
 							</span>
-							<span>Estimates</span>
+							<span>Cotizaciones</span>
 						</a>
 					</li>
 					<li class="active">
@@ -130,7 +130,7 @@
 					</li>
 				</ul>
 			</nav>
-			<!-- END OF NAVIGATION -->
+			<!-- Final menu -->
 			
 			
 			<!--Accesorios -->
@@ -165,7 +165,7 @@
 				</div>
 				
 			</div> 
-			<!-- END OF FLOATS-->
+			<!-- FINAL FLOATS-->
 		</div>
 		<!-- END OF MAIN-->
 		

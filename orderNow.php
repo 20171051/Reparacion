@@ -97,7 +97,7 @@
 		
 		<div class="main clearfix">
 			
-			<!-- START OF NAVIGATION -->
+			<!-- Inicio menu -->
 			<nav id="menu" class="nav">					
 				<ul>
 					<li>
@@ -117,7 +117,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="repairs.php">
+						<a href="reparaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
@@ -150,7 +150,7 @@
 					</li>
 				</ul>
 			</nav>
-			<!-- END OF NAVIGATION -->
+			<!-- Final menu -->
 			
 			
 			<!--Accesorios -->
@@ -161,7 +161,7 @@
 						
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href="estimatse.php">Cotizaciones</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Order Now</span>
+				<h3><a style="text-decoration: none;" href="estimatse.php">Cotizaciones</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Crear</span>
 			</div>
 			<!--Accesorios -->
 			
@@ -176,11 +176,11 @@
 					</span>
 					<form class="form-4" action="" method="post">
 						
-					ID de reparacion: <input type="text" name="rep_id" placeholder="Repair ID Isn't valid, redirecting..." value="<?php echo $repair; ?>" readonly>
+					ID de reparacion: <input type="text" name="rep_id" placeholder="El ID no es valido" value="<?php echo $repair; ?>" readonly>
 					    
 						<table>
 							<tr>
-								<th>Disponibilifaf#</th>
+								<th>Disponibilidaf#</th>
 								<th>Cantidad</th>
 								<th>Precio</th>
 								<th>Precio del elementos</th>
@@ -199,7 +199,7 @@
 								
 								$res = mysqli_query($conn, $sql);
 								if (!$res) {
-									printf("Nothing in the basket: %s\n", "Go back");
+									printf("No has agregado nada en el  carrito: %s\n", "");
 									exit();
 								}
 								
@@ -211,15 +211,15 @@
 								<tr>
 									<td><?php echo $row['description'] ?></td>
 									<td><input type="text" name="quantity[<?php echo $row['stock_id'] ?>]" size="5" value="<?php echo $_SESSION['cart'][$row['stock_id']]['quantity'] ?>" readonly /></td>
-									<td><?php echo  '&euro;' .$row['price'] ?></td>
-									<td><?php echo '&euro;' .$_SESSION['cart'][$row['stock_id']]['quantity']*$row['price'] ?></td>
+									<td><?php echo  '&#36;' .$row['price'] ?></td>
+									<td><?php echo '&#36;' .$_SESSION['cart'][$row['stock_id']]['quantity']*$row['price'] ?></td>
 								</tr>
 								<?php
 									
 								}
 							?>
 							<tr>
-								<td colspan="4"><h4>Total a pagar: <?php echo '&euro;'. $totalprice ?></h3></td>
+								<td colspan="4"><h4>Total a pagar: <?php echo '&#36;'. $totalprice ?></h3></td>
 							</tr>
 							
 						</table>
@@ -230,7 +230,7 @@
 				</div>
 				
 			</div> 
-			<!-- END OF FLOATS-->
+			<!-- FINAL FLOATS-->
 		</div>
 		<!-- END OF MAIN-->
 		

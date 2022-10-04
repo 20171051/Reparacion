@@ -4,7 +4,7 @@
 	
 	if (isset($_POST['submit'])) {
 		
-		// Define $username and $password
+		// defino $usuario y $contrasena
 		$username=$_POST['username'];
 		$password=$_POST['password'];
 		// Establishing Connection with Server by passing server_name, user_id and password as a parameter
@@ -16,7 +16,7 @@
 		$username = mysqli_real_escape_string($conn, $username);
 		$password = mysqli_real_escape_string($conn, $password);
 		
-		// Selecting Database
+		// Selecciono de la base de datos
 		$query = "SELECT * FROM staff WHERE username = '$username' AND password = '$password'";
 		$valid = mysqli_query($conn, $query);
 		
@@ -25,11 +25,11 @@
 		}
 		
 		if (mysqli_num_rows($valid) == 1 ) {	
-			$_SESSION['login_user'] = $username; // Initializing Session
-			header("location: dashboard.php"); // Redirecting To Other Page
+			$_SESSION['login_user'] = $username; // Initciando la sesion 
+			header("location: dashboard.php"); // Redireccionando a la otra pagina
 			} else {
 			$error = "Usuario o contraseña invalido";
 		}
-		mysqli_close($conn); // Closing Connection
+		mysqli_close($conn); // Cerrando conexion
 	}
 ?>

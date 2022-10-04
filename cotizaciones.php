@@ -82,7 +82,7 @@
 		
 		<div class="main clearfix">
 			
-			<!-- START OF NAVIGATION -->
+			<!-- Inicio menu -->
 			<nav id="menu" class="nav">					
 				<ul>
 					<li>
@@ -102,7 +102,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="repairs.php">
+						<a href="reparaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
@@ -135,7 +135,7 @@
 					</li>
 				</ul>
 			</nav>
-			<!-- END OF NAVIGATION -->
+			<!-- Final menu -->
 			
 			
 			<!--Accesorios -->
@@ -167,8 +167,8 @@
 									<option>100</option>
 								</select>
 							</div>
-							<div class="col-md-3">Filter:
-								<input type="text" ng-model="search" ng-change="filter()" placeholder="Filter" class="form-control" />
+							<div class="col-md-3">Filtro:
+								<input type="text" ng-model="search" ng-change="filter()" placeholder="Buscar" class="form-control" />
 							</div>
 							<!--<div class="col-md-4">
 								<p>Filtered {{ filtered.length }} of {{ totalItems}} total customers</p>
@@ -189,7 +189,7 @@
 											<td>{{data.stock_id}}</td>
 											<td>{{data.description}}</td>
 											<td>{{data.quantity}}</td>
-											<td>&euro;{{data.price}}</td>
+											<td>&#36;{{data.price}}</td>
 										</tr>
 									</tbody>
 								</table>
@@ -214,7 +214,7 @@
 				
 				
 			</div> 
-			<!-- END OF FLOATS-->
+			<!-- FINAL FLOATS-->
 		</div>
 		<!-- END OF MAIN-->
 		

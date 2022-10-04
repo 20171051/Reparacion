@@ -80,7 +80,7 @@
 		
 		<div class="main clearfix">
 			
-			<!-- START OF NAVIGATION -->
+			<!-- Inicio menu -->
 			<nav id="menu" class="nav">					
 				<ul>
 					<li>
@@ -100,7 +100,7 @@
 						</a>
 					</li>
 					<li class="active">
-						<a href="repairs.php">
+						<a href="reparaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
@@ -108,11 +108,11 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="cotizaciones.php">
 							<span class="icon">
 							<i aria-hidden="true" class="icon-coin"></i>
 							</span>
-							<span>Estimates</span>
+							<span>Cotizaciones</span>
 						</a>
 					</li>
 					<li>
@@ -133,7 +133,7 @@
 					</li>
 				</ul>
 			</nav>
-			<!-- END OF NAVIGATION -->
+			<!-- Final menu -->
 			
 			
 			<!--Accesorios -->
@@ -144,7 +144,7 @@
 						
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href="repairs.php">Reparaciones</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Agregar</span>
+				<h3><a style="text-decoration: none;" href="reparaciones.php">Reparaciones</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Agregar</span>
 			</div>
 			<!--Accesorios -->
 			
@@ -164,7 +164,7 @@
 								</select>
 							</div>
 							<div class="col-md-3">Filtro:
-								<input type="text" ng-model="search" ng-change="filter()" placeholder="Filter" class="form-control" />
+								<input type="text" ng-model="search" ng-change="filter()" placeholder="Buscar" class="form-control" />
 							</div>
 							<!-- <div class="col-md-4">
 								<p>Filtro {{ filtered.length }} de {{ totalItems}}  total de clientes </p>
@@ -176,11 +176,11 @@
 								<table class="table table-striped table-bordered">
 									<thead>
 										<th>ID&nbsp;<a ng-click="sort_by('cust_id');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Surname&nbsp;<a ng-click="sort_by('surname');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Forename&nbsp;<a ng-click="sort_by('forename');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Town&nbsp;<a ng-click="sort_by('town');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>County&nbsp;<a ng-click="sort_by('county');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Telephone&nbsp;<a ng-click="sort_by('tel');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<th>Nombre&nbsp;<a ng-click="sort_by('surname');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<th>Apellido&nbsp;<a ng-click="sort_by('forename');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<th>Dirección&nbsp;<a ng-click="sort_by('town');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<th>Cedula&nbsp;<a ng-click="sort_by('county');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<th>Telefono&nbsp;<a ng-click="sort_by('tel');"><i class="glyphicon glyphicon-sort"></i></a></th>
 									</thead>
 									<tbody>
 										<tr ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
@@ -221,7 +221,7 @@
 				
 				
 			</div> 
-			<!-- END OF FLOATS-->
+			<!-- FINAL FLOATS-->
 		</div>
 		<!-- END OF MAIN-->
 		

@@ -22,10 +22,10 @@
     <table>
 		
         <tr>
-            <th>Inventario disponible#</th>
+            <th>Servicios</th>
             <th>Cantidad</th>
             <th>Precio</th>
-            <th>Precio de los elementos</th>
+            <th>Total</th>
 		</tr>
 		
         <?php
@@ -42,7 +42,7 @@
 			
 			$res = mysqli_query($conn, $sql);
 			if (!$res) {
-				printf("Nothing in the basket: %s\n", "Go back");
+				printf("No has agregado nada en el  carrito: %s\n", "");
 				exit();
 			}
 			
@@ -54,15 +54,15 @@
 			<tr>
 				<td><?php echo $row['description'] ?></td>
 				<td><input type="text" name="quantity[<?php echo $row['stock_id'] ?>]" size="5" value="<?php echo $_SESSION['cart'][$row['stock_id']]['quantity'] ?>" /></td>
-				<td><?php echo  '&euro;' .$row['price'] ?></td>
-				<td><?php echo '&euro;' .$_SESSION['cart'][$row['stock_id']]['quantity']*$row['price'] ?></td>
+				<td><?php echo  '&#36;' .$row['price'] ?></td>
+				<td><?php echo '&#36;' .$_SESSION['cart'][$row['stock_id']]['quantity']*$row['price'] ?></td>
 			</tr>
 			<?php
 				
 			}
 		?>
 		<tr>
-			<td colspan="4">Total: <?php echo '&euro;'. $totalprice ?></td>
+			<td colspan="4">Total: <?php echo '&#36;'. $totalprice ?></td>
 		</tr>
 		
 	</table>

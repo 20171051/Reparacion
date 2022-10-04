@@ -57,9 +57,9 @@
 			}
 			
 			if (mysqli_affected_rows($conn) == 1) {
-				$success =  "Reparacion agregada exitosamente! . Redireccionando.....<br><br>";
+				$success =  "Reparacion agregada exitosamente!<br><br>";
 				$id = $cust_id;
-				//header("refresh:5; url=repairs.php");
+				header("refresh:5; url=reparaciones.php");
 				
 				} else {
 				$notFound =  "¡No se pudo agregar debido a un error del sistema!<br><br>";

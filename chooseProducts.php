@@ -82,7 +82,7 @@
 		
 		<div class="main clearfix">
 			
-			<!-- START OF NAVIGATION -->
+			<!-- Inicio menu -->
 			<nav id="menu" class="nav">					
 				<ul>
 					<li>
@@ -102,7 +102,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="repairs.php">
+						<a href="reparaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
@@ -135,7 +135,7 @@
 					</li>
 				</ul>
 			</nav>
-			<!-- END OF NAVIGATION -->
+			<!-- Final menu -->
 			
 			
 			<!--Accesorios -->
@@ -146,7 +146,7 @@
 						<li id="add"><a href="chooseRepair.php">Ordena ahora</a></li>
 					</ul>
 				</div>
-				<h3>Elige el producto</h3>
+				<h3>Elige el servicio</h3>
 			</div>
 			<!--Accesorios -->
 			
@@ -162,7 +162,7 @@
 				
 				
 			</div> 
-			<!-- END OF FLOATS-->
+			<!-- FINAL FLOATS-->
 		</div>
 		<!-- END OF MAIN-->
 		

@@ -78,8 +78,8 @@
 		<tr>
 			<td><?php echo $row['stock_id'] ?></td>
 			<td><?php echo $row['description'] ?></td>
-			<td><?php echo '&euro;' .$row['price'] ?></td>
-			<td><a href="chooseProducts.php?page=products&action=add&id=<?php echo $row['stock_id'] ?>">Add to cart</a></td>
+			<td><?php echo '&#36;' .$row['price'] ?></td>
+			<td><a href="chooseProducts.php?page=products&action=add&id=<?php echo $row['stock_id'] ?>">Agregar</a></td>
 		</tr>
 		<?php
 			

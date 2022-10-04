@@ -8,7 +8,7 @@
 		$dbcnx = mysqli_connect("localhost", "root", "", "compsys");
 		
 		if (mysqli_connect_errno($dbcnx )) {
-			$error = "Failed to connect to MySQL: " .mysqli_connect_error();
+			$error = "Fallo para conecar a la base  " .mysqli_connect_error();
 			exit();
 		}
 		
@@ -34,13 +34,13 @@
 			//echo $res;
 			if(mysqli_affected_rows($dbcnx)< 1){
 				
-				$error = "<br><br><p><em>No haz actualizado nada! Redireccionando...</em></p>";  
-				header("refresh:2; url=repairs.php");
+				$error = "<br><br><p><em>No haz actualizado nada! </em></p>";  
+				header("refresh:2; url=reparaciones.php");
 			}
 			else
 			{
-				$success =  "<br><p><em>Actualizacion exitosa! Redireccionando....</em></p>";
-				header("refresh:2; url=repairs.php");
+				$success =  "<br><p><em>Actualizacion exitosa! .</em></p>";
+				header("refresh:2; url=reparaciones.php");
 			}
 			
 			

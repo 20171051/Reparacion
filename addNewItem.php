@@ -44,8 +44,8 @@
 				}
 				
 				if (mysqli_affected_rows($conn) == 1) {
-					$success =  "Un nuevo Elemento a sido agregado exitosamente al inventario. Redireccionando.....";
-					header("refresh:5; url=inventory.php");
+					$success =  "Un nuevo Elemento a sido agregado exitosamente al inventario.";
+					header("refresh:5; url=servicios.php");
 					
 					} else {
 					$error =  ("¡No se pudo agregar debido a un error del sistema!");

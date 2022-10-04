@@ -81,7 +81,7 @@
 		
 		<div class="main clearfix">
 			
-			<!-- START OF NAVIGATION -->
+			<!-- Inicio menu -->
 			<nav id="menu" class="nav">					
 				<ul>
 					<li>
@@ -134,7 +134,7 @@
 					</li>
 				</ul>
 			</nav>
-			<!-- END OF NAVIGATION -->
+			<!-- Final menu -->
 			
 			
 			<!--Accesorios -->
@@ -179,17 +179,20 @@
 							$tel = $row ['tel'];
 							
 							//-display the result of the array
-							$staff = "<ul><h1><li> Nombre: " .$firstname . "</li><li> Apellido: " . $lastname .  "</li><li>Direccion:  "   .$town . "</li><li>Cedula:  "   .$county . "</li><li> Telefono: "   .$tel . "</li></h1></ul>";
+						
+							$staff = "<ul><h2><li> Nombre: " .$firstname . "</li><li> Apellido: " . $lastname .  "</li><li>Direccion:  "   .$town . "</li><li>Cedula:  "   .$county . "</li><li> Telefono: "   .$tel . "</li></h1></ul>";
 							echo $staff;
+
+							
 						}
 						mysqli_close($conn);
-
+					
 				?>
 				
 			</div> 
 			<!-- END OF FULL WIDGET-->
 		</div> 
-		<!-- END OF FLOATS-->
+		<!-- FINAL FLOATS-->
 	</div>
 	<!-- END OF MAIN-->
 	

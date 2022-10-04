@@ -115,7 +115,7 @@
 						$res = mysqli_query($conn, $sql);
 						
 						if (!$res) {
-							printf("<h2>Basket is empty.</h2> %s", "<br><strong>Please choose your products from the left!<strong>"); //mysqli_error($conn)
+							printf("<h2>No has seleccionado nada!</h2> %s", "<br><strong>Por favor, Elige un servicio!<strong>"); //mysqli_error($conn)
 							exit();
 						}
 						

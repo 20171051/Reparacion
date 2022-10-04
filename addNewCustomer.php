@@ -2,7 +2,7 @@
 	$success = '';
 	$error =  '';
 	if (isset($_POST['submit'])) {
-		// Define $username and $password
+		// Definir $usuario y $contraseña
 		$surname = $_POST['surname'];
 		$forename = $_POST['forename'];
 		$town = $_POST['town'];
@@ -10,7 +10,7 @@
 		$tel = $_POST['telephone'];
 		
 		
-		// Establishing Connection with Server by passing server_name, user_id and password as a parameter
+		// Establecimiento de conexión con el servidor pasando server_name, user_id and password as a parameter
 		$conn= mysqli_connect("localhost", "root", "", "compsys");
 		
 		// Check connection

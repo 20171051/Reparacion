@@ -82,7 +82,7 @@
 		
 			<div class="main clearfix">
 			
-			<!-- START OF NAVIGATION -->
+			<!-- Inicio menu -->
 			<nav id="menu" class="nav">					
 				<ul>
 					<li >
@@ -103,7 +103,7 @@
 						</a>
 					</li>
 					<li>
-					<a href="repairs.php">
+					<a href="reparaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
@@ -139,7 +139,7 @@
 			</nav>
 			
 			
-			<!-- END OF NAVIGATION -->
+			<!-- Final menu -->
 			
 			
 			<!--Accesorios -->
@@ -179,7 +179,7 @@
 								</select>
 							</div>
 							<div class="col-md-3">Filtro:
-								<input type="text" ng-model="search" ng-change="filter()" placeholder="Filtro" class="form-control" />
+								<input type="text" ng-model="search" ng-change="filter()" placeholder="Buscar" class="form-control" />
 							</div>
 						<!--	<div class="col-md-4">
 								<p>Filtro {{ filtered.length }} de {{ totalItems}} total cliente</p>
@@ -227,7 +227,7 @@
 				
 				
 			</div> 
-			<!-- END OF FLOATS-->
+			<!-- FINAL FLOATS-->
 		</div>
 		<!-- END OF MAIN-->
 		

@@ -34,12 +34,12 @@
 				if(mysqli_affected_rows($dbcnx)< 1){
 					
 					$error = "<br><br><p><em>No haz actualizado nada! Redireccionando....</em></p>";  
-					header("refresh:2; url=inventory.php");
+					header("refresh:2; url=servicios.php");
 				}
 				else
 				{
-					$success =  "<br><p><em>Stock details have been updated successfully! Redirecting....</em></p>";
-					header("refresh:2; url=inventory.php");
+					$success =  "<br><p><em>Actualizado de forma correcta! </em></p>";
+					header("refresh:2; url=servicios.php");
 				}
 				
 				

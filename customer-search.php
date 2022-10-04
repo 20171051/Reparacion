@@ -77,7 +77,7 @@
 		
 		<div class="main clearfix">
 			
-			<!-- START OF NAVIGATION -->
+			<!-- Inicio menu -->
 			<nav id="menu" class="nav">					
 				<ul>
 					<li>
@@ -120,7 +120,7 @@
 							<span>Servicios</span>
 						</a>
 					</li>
-					<li>
+					<!-- <li>
 						<a href="#">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-coin"></i>
@@ -129,8 +129,8 @@
 						</a>
 					</li>
 				</ul>
-			</nav>
-			<!-- END OF NAVIGATION -->
+			</nav> -->
+			<!-- Final menu -->
 			
 			
 			<!--Accesorios -->

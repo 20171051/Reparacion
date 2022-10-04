@@ -81,7 +81,7 @@
 		
 		<div class="main clearfix">
 			
-			<!-- START OF NAVIGATION -->
+			<!-- Inicio menu -->
 			<nav id="menu" class="nav">					
 				<ul>
 					<li>
@@ -101,7 +101,7 @@
 						</a>
 					</li>
 					<li class="active">
-						<a href="repairs.php">
+						<a href="reparaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
@@ -134,7 +134,7 @@
 					</li>
 				</ul>
 			</nav>
-			<!-- END OF NAVIGATION -->
+			<!-- Final menu -->
 			
 			
 			<!--Accesorios -->
@@ -142,7 +142,7 @@
 				<div class="submenu">
 					<ul>
 						<li id="update" value="Update Repair">Actualizar</li>
-						<li id="add"><a href="addRepair.php">Agregar</a></li>
+						<li id="add"><a href="agregarrep.php">Agregar</a></li>
 					</ul>
 				</div>
 				<h3>Reparaciones</h3>
@@ -222,7 +222,7 @@
 				<!-- END OF FULL WIDGET-->
 				
 			</div> 
-			<!-- END OF FLOATS-->
+			<!-- FINAL FLOATS-->
 		</div>
 		<!-- END OF MAIN-->
 		

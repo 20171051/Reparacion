@@ -96,7 +96,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a href="reparaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
@@ -155,7 +155,7 @@
 						</li>
 						
 						<li>
-							 <a href="addRepair.php">
+							 <a href="agregarrep.php">
 								<span class="icon"> 
 									<i aria-hidden="true" class="icon-plus"></i>
 								</span>
@@ -190,7 +190,7 @@
 				<div class="widget-content wide-widget">
 					<h1 class="center">Detalles de reparación </h1>
 					<!--Div that will hold the pie chart-->
-				<!	<div id="pie_chart" style="width: 100%; height: 362px;"></div>
+				<div id="pie_chart" style="width: 100%; height: 362px;"></div>
 				</div>
 				<!-- Repair Summary -->
 				

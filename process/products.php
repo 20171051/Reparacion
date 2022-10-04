@@ -45,7 +45,7 @@
 	
 ?>
 
-<h1>Product List</h1>
+<h1>Lista de servicios</h1>
 <?php
     if(isset($message)){
         echo "<h2>$message</h2>";
@@ -53,10 +53,10 @@
 ?>
 <table>
 	<tr>
-		<th>Stock#</th>
-		<th>Description</th>
-		<th>Price</th>
-		<th>Action</th>
+		<th>#</th>
+		<th>Servicio</th>
+		<th>Precio</th>
+		<th>Acción</th>
 	</tr>
 	<?php
 		$conn= mysqli_connect("localhost", "root", "", "compsys");
@@ -78,8 +78,8 @@
 		<tr>
 			<td><?php echo $row['stock_id'] ?></td>
 			<td><?php echo $row['description'] ?></td>
-			<td><?php echo '&euro;' .$row['price'] ?></td>
-			<td><a href="index.php?page=products&action=add&id=<?php echo $row['stock_id'] ?>">Add to cart</a></td>
+			<td><?php echo '&#36;' .$row['price'] ?></td>
+			<td><a href="index.php?page=products&action=add&id=<?php echo $row['stock_id'] ?>">Agregar</a></td>
 		</tr>
 		<?php
 			

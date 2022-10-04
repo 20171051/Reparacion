@@ -78,7 +78,7 @@
 		
 		<div class="main clearfix">
 			
-			<!-- START OF NAVIGATION -->
+			<!-- Inicio menu -->
 			<nav id="menu" class="nav">					
 				<ul>
 					<li>
@@ -98,7 +98,7 @@
 						</a>
 					</li>
 					<li class="active">
-						<a href="repairs.php">
+						<a href="reparaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
@@ -132,7 +132,7 @@
 					</li>
 				</ul>
 			</nav>
-			<!-- END OF NAVIGATION -->
+			<!-- Final menu -->
 			
 			
 			<!--Accesorios -->
@@ -140,10 +140,10 @@
 				<div class="submenu">
 					<ul>
 						<li><a href="##" onClick="history.go(-1); return false;">Retroceder</a></li>
-						<li id="add"><a href="addRepair.php">Agregar reparación</a></li>
+						<li id="add"><a href="agregarrep.php">Agregar reparación</a></li>
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href="repairs.php">Reparacion</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Actualizacion de reparacion</span>
+				<h3><a style="text-decoration: none;" href="reparaciones.php">Reparacion</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Actualizacion de reparacion</span>
 			</div>
 			<!--Accesorios -->
 			
@@ -166,14 +166,14 @@
 						Sistema operativo: <?php echo enumDropdown("repairs", "OS", "ud_os"); ?>
 						Descripcion: <textarea rows="5" name="ud_description" required><?php echo $description; ?></textarea>
 						Estado: <?php echo enumDropdown("repairs", "Status", "ud_status"); ?>
-						<input type="submit" name="submit" value="Update Repair Details">
+						<input type="submit" name="submit" value="Actualizar">
 						
 					</form>
 					
 				</div>
 				
 			</div> 
-			<!-- END OF FLOATS-->
+			<!-- FINAL FLOATS-->
 		</div>
 		<!-- END OF MAIN-->
 		
