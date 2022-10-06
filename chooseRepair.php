@@ -166,7 +166,7 @@
 									<option>100</option>
 								</select>
 							</div>
-							<div class="col-md-3">Filter:
+							<div class="col-md-3">Filtro
 								<input type="text" ng-model="search" ng-change="filter()" placeholder="Filter" class="form-control" />
 							</div>
 							<div class="col-md-4">

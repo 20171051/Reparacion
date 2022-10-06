@@ -26,7 +26,7 @@
 	</head>
 	
 	<body id="top" style="font-size: 62.5%;">
-		<!-- Comienzo del Header -->
+		<!-- BEGIN Header -->
 		<header id="header-wrapper">
 			
 			<div id="top-bar" class="clearfix">
@@ -36,7 +36,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="" method="post">
-							<!--<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">-->
+							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -57,7 +57,7 @@
 							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
 							<p>
 								<a href="logout.php" title="Sign out">
-									<span>Sign-out</span>
+									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
 									</span>
@@ -77,7 +77,7 @@
 		
 		<div class="main clearfix">
 			
-			<!-- Inicio menu -->
+			<!-- START OF NAVIGATION -->
 			<nav id="menu" class="nav">					
 				<ul>
 					<li>
@@ -97,7 +97,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="reparaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
@@ -105,7 +105,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="cotizaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-coin"></i>
 							</span>
@@ -113,14 +113,14 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="servicios.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
 							<span>Servicios</span>
 						</a>
 					</li>
-					<!-- <li>
+					<!--<li>
 						<a href="#">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-coin"></i>
@@ -129,13 +129,13 @@
 						</a>
 					</li>
 				</ul>
-			</nav> -->
-			<!-- Final menu -->
+			</nav>-->
+			<!-- END OF NAVIGATION -->
 			
 			
-			<!--Accesorios -->
-			<div class="bread dash"><h3>Customer</h3></div>
-			<!--Accesorios -->
+			<!--Breadcrumb -->
+			<div class="bread dash"><h3>Clientes</h3></div>
+			<!--Breadcrumb -->
 			
 			
 			<div class="floats">
