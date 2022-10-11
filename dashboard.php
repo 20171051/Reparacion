@@ -164,7 +164,7 @@
 						</li>
 						
 						<li>
-							<a href="#">
+							<a href="chooseProducts.php">
 								<span class="icon"> 
 									<i aria-hidden="true" class="icon-plus"></i>
 								</span>
@@ -173,7 +173,7 @@
 						</li>
 						
 						<li>
-						<a href="">
+						<a href="addInventory.php">
 								<span class="icon"> 
 									<i aria-hidden="true" class="icon-plus"></i>
 								</span>

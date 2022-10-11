@@ -54,9 +54,9 @@
 <table>
 	<tr>
 		<th>Stock#</th>
-		<th>Description</th>
-		<th>Price</th>
-		<th>Action</th>
+		<th>Servicio</th>
+		<th>Precio</th>
+		<th>Accion</th>
 	</tr>
 	<?php
 		$conn= mysqli_connect("localhost", "root", "", "compsys");

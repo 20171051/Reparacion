@@ -88,6 +88,7 @@
 							<span>Inicio</span>
 						</a>
 					</li>
+					<li>
 					<li class="active">
 						<a href="cliente.php">
 							<span class="icon"> 
@@ -97,7 +98,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="reparaciones.php">
+						<<a href="reparaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
@@ -112,7 +113,7 @@
 							<span>Cotizaciones</span>
 						</a>
 					</li>
-					<li>
+				<li>
 						<a href="servicios.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
@@ -120,6 +121,16 @@
 							<span>Servicios</span>
 						</a>
 					</li>
+					<li class="">
+						<a href="cuenta.php">
+							<span class="icon">
+								<i aria-hidden="true" class="icon-user"></i>
+							</span>
+							<span>Cuenta</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
 					<!--<li>
 						<a href="#">
 							<span class="icon">
