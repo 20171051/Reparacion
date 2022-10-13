@@ -12,7 +12,7 @@
 	$login_id = $row['staff_id'];
 	
 	if(!isset($login_session)){
-		mysqli_close($connection); // Closing Connection
-		header('Location: index.php'); // Redirecting To Home Page
+		mysqli_close($connection); // cierra conexion
+		header('Location: index.php'); // Redireciona al index
 	}
 ?>

@@ -180,7 +180,11 @@
 							
 							//-display the result of the array
 						
-							$staff = "<ul><h2><li> Nombre: " .$firstname . "</li><li> Apellido: " . $lastname .  "</li><li>Direccion:  "   .$town . "</li><li>Cedula:  "   .$county . "</li><li> Telefono: "   .$tel . "</li></h1></ul>";
+							$staff = "<ul><h1><li> Nombre: " .$firstname .
+							 "</li><li> Apellido: "  . $lastname .  
+							 "</li><li>Direccion:  "   .$town . 
+							 "</li><li>Cedula:  "   .$county . 
+							 "</li><li> Telefono: "   .$tel . "</li></h1></ul>";
 							echo $staff;
 
 							
