@@ -57,7 +57,7 @@
 							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
 							<p>
 								<a href="logout.php" title="Sign out">
-									<span>Sign-out</span>
+									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
 									</span>
@@ -85,7 +85,7 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-home"></i>
 							</span>
-							<span>Home</span>
+							<span>Inicio</span>
 						</a>
 					</li>
 					<li>
@@ -93,7 +93,7 @@
 							<span class="icon"> 
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
-							<span>Customers</span>
+							<span>Cliente</span>
 						</a>
 					</li>
 					<li>
@@ -101,11 +101,11 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>
-							<span>Repairs</span>
+							<span>Reparaciones</span>
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="cotizaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-coin"></i>
 							</span>
@@ -117,15 +117,15 @@
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
 							</span>
-							<span>Inventory</span>
+							<span>Servicios</span>
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<span class="icon">
-								<i aria-hidden="true" class="icon-coin"></i>
+						<a href="cuenta.php">
+						<span class="icon">
+								<i aria-hidden="true" class="icon-user"></i>
 							</span>
-							<span>Invoices</span>
+							<span>Cuenta</span>
 						</a>
 					</li>
 				</ul>
@@ -137,11 +137,11 @@
 			<div class="bread dash">
 				<div class="submenu">
 					<ul>
-						<li><a href="##" onClick="history.go(-1); return false;">Go Back</a></li>
+						<li><a href="##" onClick="history.go(-1); return false;">Retroceder</a></li>
 						<li id="add"><a href="addInventory.php">Nuevo Servicio</a></li>
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href="inventory.php">Inventory</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Update Inventory</span>
+				<h3><a style="text-decoration: none;" href="servicios.php">Servicios</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Actualizar</span>
 			</div>
 			<!--Accesorios -->
 			
@@ -155,11 +155,11 @@
 						?>
 					</span>
 					<form class="form-4" action="" method="post">
-						Stock ID: <input type="text" name="ud_id" placeholder="Stock ID is invalid" value="<?php echo $id; ?>" readonly>
-						Description: <input type="text" name="ud_description" value="<?php echo $description; ?>" required>
-						Quantity: <input type="number" name="ud_quantity" value="<?php echo $quantity; ?>" required>
-						Price: <input type="text" name="ud_price" value="<?php echo $price; ?>" required>
-						<input type="submit" name="submit" value="Update Inventory Details">
+						ID Servicio: <input type="text" name="ud_id" placeholder="Stock ID is invalid" value="<?php echo $id; ?>" readonly>
+						Descricpión: <input type="text" name="ud_description" value="<?php echo $description; ?>" required>
+						Cantidad: <input type="number" name="ud_quantity" value="<?php echo $quantity; ?>" required>
+						Precio: <input type="text" name="ud_price" value="<?php echo $price; ?>" required>
+						<input type="submit" name="submit" value="Actualizar">
 					</form>
 					
 				</div>
