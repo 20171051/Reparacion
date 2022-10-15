@@ -157,7 +157,7 @@
 							?>
 						</span>
 						<input type="text" name="description" placeholder="Descripcion" required>
-						<input type="number" name="quantity" placeholder="Cantidad" required>
+						<!-- <input type="number" name="quantity" placeholder="Cantidad" required> -->
 						<input type="text" name="price" placeholder="Precio" required>
 						<input type="submit" name="submit" value="Agregar">
 					</form>

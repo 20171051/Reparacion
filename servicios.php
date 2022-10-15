@@ -180,14 +180,14 @@
 									<thead>
 										<th>ID&nbsp;<a ng-click="sort_by('stock_id');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Descripcion&nbsp;<a ng-click="sort_by('description');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Cantidad&nbsp;<a ng-click="sort_by('quantity');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<!-- <th>Cantidad&nbsp;<a ng-click="sort_by('quantity');"><i class="glyphicon glyphicon-sort"></i></a></th> -->
 										<th>Precio&nbsp;<a ng-click="sort_by('price');"><i class="glyphicon glyphicon-sort"></i></a></th>
 									</thead>
 									<tbody>
 										<tr ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
 											<td>{{data.stock_id}}</td>
 											<td>{{data.description}}</td>
-											<td>{{data.quantity}}</td>
+											<!-- <td>{{data.quantity}}</td> -->
 											<td>&#36;{{data.price}}</td>
 										</tr>
 									</tbody>
