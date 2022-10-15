@@ -193,6 +193,7 @@
 										<th>ID&nbsp;<a ng-click="sort_by('cust_id');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Nombre&nbsp;<a ng-click="sort_by('forename');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Apellido&nbsp;<a ng-click="sort_by('surname');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										
 										<th>Direccion&nbsp;<a ng-click="sort_by('town');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Cedula&nbsp;<a ng-click="sort_by('county');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Telefono&nbsp;<a ng-click="sort_by('tel');"><i class="glyphicon glyphicon-sort"></i></a></th>
@@ -200,8 +201,8 @@
 									<tbody>
 										<tr ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
 											<td>{{data.cust_id}}</td>
-											<td>{{data.surname}}</td>
 											<td>{{data.forename}}</td>
+											<td>{{data.surname}}</td>
 											<td>{{data.town}}</td>
 											<td>{{data.county}}</td>
 											<td>{{data.tel}}</td>

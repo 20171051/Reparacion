@@ -228,7 +228,7 @@
 				 <div class="full-widget" id="updateDiv" style="display:none;">
 					
 					<form class="form-4" method="post" action="updateInventory.php">	
-						<p>Ingresa el ID del inventario:</p> <br>
+						<p>Ingresa el ID del servicio:</p> <br>
 						<input type="number" name="record" placeholder="Introduzca un numero ej: 1" min="1" maxlength="10" required>
 						<input type="submit" name="go" value="Actualizar >>">	
 					</form>
@@ -237,7 +237,7 @@
 				-->	
 				<div class="full-widget" id="deleteDiv" style="display:none;">
 					<form class="form-4" method="post" action="servicios.php">	
-						<p> ID del inventario a eliminar: </p> <br>
+						<p> ID del servicio a eliminar: </p> <br>
 						<input type="number" name="stock_id" placeholder="Introduzca un numero ej: 1" min="1" maxlength="10" required>
 						<input type="submit" name="delete" value="Eliminar" >	
 					</form>

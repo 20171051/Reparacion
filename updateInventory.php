@@ -138,7 +138,7 @@
 				<div class="submenu">
 					<ul>
 						<li><a href="##" onClick="history.go(-1); return false;">Go Back</a></li>
-						<li id="add"><a href="addInventory.php">Add New Item</a></li>
+						<li id="add"><a href="addInventory.php">Nuevo Servicio</a></li>
 					</ul>
 				</div>
 				<h3><a style="text-decoration: none;" href="inventory.php">Inventory</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Update Inventory</span>

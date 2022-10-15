@@ -140,7 +140,7 @@
 						
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href="servicios.php">Inventario</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Add New Item</span>
+				<h3><a style="text-decoration: none;" href="servicios.php">Servicios</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Nuevo Servicio</span>
 			</div>
 			<!--Accesorios -->
 			
@@ -149,7 +149,7 @@
 				<div class="full-widget">		
 					
 					<form class="form-4" action="" method="post">
-						<h1>Agregar al inventario: </h1>
+						<h1>Agregar al Servicios: </h1>
 						<span id="msg">
 							<?php 
 								echo $success; 
