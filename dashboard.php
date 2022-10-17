@@ -177,7 +177,7 @@
 								<span class="icon"> 
 									<i aria-hidden="true" class="icon-plus"></i>
 								</span>
-								<span>Agregar un servicio y productos</span>
+								<span>Agregar un servicio </span>
 							</a>
 						</li>
 						
