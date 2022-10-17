@@ -146,6 +146,8 @@
 			<div class="bread">
 				<div class="submenu">
 					<ul>
+						<li id="add"><a href="reportes2.php">Reportes</a></li>
+						<li></li>
 						<li id="update" value="Update Customer" >Actualizar cliente</li>
 						<li id="add"><a href="agregarcliente.php">Agregar Cliente</a></li>
 					</ul>

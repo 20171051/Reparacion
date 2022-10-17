@@ -48,7 +48,7 @@
 			]);
 			
 			var options = {
-				title: '<?php echo "Desde "  .date('D F Y') ." Hasta " .date('h:i:s a', time()) ." de ahora"?>',
+				title: '<?php echo " "  .date('D F Y')?>',
 				is3D: 'true',
 				pieSliceText: 'value',
 				slices: {  7: {offset: 0.2},
