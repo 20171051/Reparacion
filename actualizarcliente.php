@@ -156,9 +156,8 @@
 					</span>
 					<form class="form-4" action="" method="post">
 						ID del cliente: <input type="text" name="ud_id" value="<?php echo $id; ?>" readonly>
-						Nombre<input type="text" name="ud_surname" value="<?php echo $surname; ?>"><br />
-						Apellido <input type="text" name="ud_forename" value="<?php echo $forename; ?>"><br />
-						
+						Nombre <input type="text" name="ud_forename" value="<?php echo $forename; ?>"><br />
+						Apellido<input type="text" name="ud_surname" value="<?php echo $surname; ?>"><br />
 						Dirección: <input type="text" name="ud_town" value="<?php echo $town; ?>"><br />
 						Cedula: <input type="text" name="ud_county" value="<?php echo $county; ?>"><br />
 						Telefono: <input type="text" name="ud_tel" value="<?php echo $tel; ?>"><br />

@@ -103,7 +103,7 @@
 							<span>Reparaciones</span>
 						</a>
 					</li>
-					<!--<li>
+			<li>
 						<a href="cotizaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-coin"></i>
@@ -118,7 +118,7 @@
 							</span>
 							<span>Servicios</span>
 						</a>
-					</li>-->
+					</li>
 					<li>
 						<a href="cuenta.php">
 							<span class="icon">

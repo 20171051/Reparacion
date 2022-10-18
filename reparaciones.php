@@ -141,6 +141,8 @@
 			<div class="bread">
 				<div class="submenu">
 					<ul>
+					<li id="addd"><a href="reportes.php" target="_blank">Reporte</a></li>
+					<li></li>
 						<li id="update" value="Update Repair">Actualizar</li>
 						<li id="add"><a href="agregarrep.php">Agregar</a></li>
 					</ul>

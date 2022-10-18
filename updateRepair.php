@@ -58,7 +58,7 @@
 							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
 							<p>
 								<a href="logout.php" title="Sign out">
-									<span>Sign-out</span>
+									<span>Salir</span>
 									<span class="icon"> 
 										<i aria-hidden="true" class="icon-exit"></i>
 									</span>

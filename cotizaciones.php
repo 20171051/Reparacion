@@ -142,7 +142,7 @@
 			<div class="bread">
 				<div class="submenu">
 					<ul>
-						<li id="products" value="Choose Products" onclick="hideList()">Actualizar</li>
+						<!-- <li id="products" value="Choose Products" onclick="hideList()">Actualizar</li> -->
 						<li id="add"><a href="chooseProducts.php">Elegir productos</a></li>
 					</ul>
 				</div>

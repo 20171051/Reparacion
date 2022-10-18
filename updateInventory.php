@@ -157,7 +157,7 @@
 					<form class="form-4" action="" method="post">
 						ID Servicio: <input type="text" name="ud_id" placeholder="Stock ID is invalid" value="<?php echo $id; ?>" readonly>
 						Descricpión: <input type="text" name="ud_description" value="<?php echo $description; ?>" required>
-						Cantidad: <input type="number" name="ud_quantity" value="<?php echo $quantity; ?>" required>
+						<!-- Cantidad: <input type="number" name="ud_quantity" value="" required> -->
 						Precio: <input type="text" name="ud_price" value="<?php echo $price; ?>" required>
 						<input type="submit" name="submit" value="Actualizar">
 					</form>

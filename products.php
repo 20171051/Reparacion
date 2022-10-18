@@ -45,7 +45,7 @@
 	
 ?>
 
-<h1>Product List</h1>
+<h1>Lista de servicios</h1>
 <?php
     if(isset($message)){
         echo "<h2>$message</h2>";

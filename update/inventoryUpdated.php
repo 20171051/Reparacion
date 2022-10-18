@@ -33,7 +33,7 @@
 				//echo $res;
 				if(mysqli_affected_rows($dbcnx)< 1){
 					
-					$error = "<br><br><p><em>No haz actualizado nada! Redireccionando....</em></p>";  
+					$error = "<br><br><p><em>No haz actualizado nada!.</em></p>";  
 					header("refresh:2; url=servicios.php");
 				}
 				else
@@ -72,7 +72,7 @@
 			}
 			
 			} else {
-			$error = "Price should be numeric!";
+			$error = "El precio debe ser numerico!";
 		}
 	}
 ?>

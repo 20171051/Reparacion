@@ -4,26 +4,27 @@ require('fpdf/fpdf.php');
 class PDF extends FPDF
 {
 // Cabecera de página
-function Header()
-{
-    // Logo
-   
-    // Arial bold 15
-    $this->SetFont('Arial','B',18);
-    // Movernos a la derecha
-    $this->Cell(80);
-    // Título
-    $this->Cell(40,10,'Reporte de ...',0,0,'C');
-    // Salto de línea
-    $this->Ln(20);
+    function Header()
+    {
 
-    $this->Cell(30, 10, 'id', 1,0,'c',0);
-    $this->Cell(30, 10, 'precio', 1,0,'c',0);
-    $this->Cell(90, 10, 'descrp', 1,0,'c',0);
-    $this->Cell(40, 10, 'cantidad', 1,1,'c',0);
-}
-
-// Pie de página
+        $this->Image('images/logo01.png',10,6);
+        $this->SetFont('Arial','B',14);
+        $this->Cell(276,5,'Reportes Reparaciones',0,0,'C');
+        $this->Ln();
+        $this->SetFont('Arial','',12);
+        $this->Cell(276,10,'Informacion de todos las reparaciones',0,0,'C');
+        $this->ln(20);
+        $this->Ln();
+        $this->SetFont('Arial','B',16);
+        $this->Cell(10, 10, 'ID', 1,0,'C',0);
+        $this->Cell(30, 10, 'ID Cliente', 1,0,'C',0);
+        $this->Cell(30, 10, 'Equipo', 1,0,'C',0);
+        $this->Cell(80, 10,'Descripcion', 1,0,'C',0);
+        $this->Cell(30, 10,'Marca', 1,0,'C',0);
+        $this->Cell(40, 10, 'Modelo', 1,0,'C',0);
+        $this->Cell(60, 10,'Estado', 1,1,'C');
+    }
+    // Pie de página
 function Footer()
 {
     // Posición: a 1,5 cm del final
@@ -31,24 +32,29 @@ function Footer()
     // Arial italic 8
     $this->SetFont('Arial','I',8);
     // Número de página
-    $this->Cell(0,10,'pagina '.$this->PageNo().'/{nb}',0,0,'C');
+    $this->Cell(0,10,utf8_decode('pagina ').$this->PageNo().'/{nb}',0,0,'C');
+
 }
 }
-require 'db.php';
-$consulta = "SELECT * FROM stock";
+require'db.php';
+$consulta = "SELECT * FROM repairs";
 $resultado = $mysqli->query($consulta);
 
 $pdf = new PDF();
 $pdf ->  AliasNbPages();
-$pdf->AddPage();
+$pdf->AddPage('L','A4',0);
 $pdf->SetFont('Arial','',16);
 
+
 while($row = $resultado->fetch_assoc()){
-    $pdf->Cell(30, 10, $row['stock_id'], 1,0,'c',0);
-    $pdf->Cell(30, 10, $row['price'], 1,0,'c',0);
-    $pdf->Cell(90, 10, $row['description'], 1,0,'c',0);
-    $pdf->Cell(40, 10, $row['quantity'], 1,1,'c',0);
-    
+    $pdf->Cell(10, 10, $row['Rep_ID'], 1,0,'L',0);
+    $pdf->Cell(30, 10, $row['Cust_ID'], 1,0,'L',0);
+    $pdf->Cell(30, 10, $row['DeviceType'], 1,0,'L',0);
+    $pdf->Cell(80, 10,utf8_decode($row['Description']), 1,0,'L',0);
+    $pdf->Cell(30, 10, $row['Brand'], 1,0,'L',0);
+    $pdf->Cell(40, 10, $row['Model'], 1,0,'L',0);
+    $pdf->Cell(60, 10, $row['Status'], 1,1,'L',0);
+
     
 }
 
