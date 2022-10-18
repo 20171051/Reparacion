@@ -172,26 +172,47 @@
 						//-create  while loop and loop through result set
 						while($row = mysqli_fetch_array($result)){
 							$ID = $row['staff_id'];
-							$firstname  =$row['forename'];
-							$lastname=$row['surname'];
-							$town = $row['town'];
-							$county = $row['county'];
+							$Nombre =$row['forename'];
+							$Apellido=$row['surname'];
+							$Direccion = $row['town'];
+							$Cedula= $row['county'];
 							$tel = $row ['tel'];
 							
 							//-display the result of the array
 						
-							$staff = "<ul><h1><li> Nombre: "  .$firstname .
-							 "</li><li> Apellido: "  . $lastname .  
-							 "</li><li>Direccion:  "   .$town . 
-							 "</li><li>Cedula:  "   .$county . 
-							 "</li><li> Telefono: "   .$tel . "</li></h1></ul>";
-							echo $staff;
+							// $staff = "<ul><h1><li> Nombre: "  .$firstname .
+							//  "</li><li> Apellido: "  . $lastname .  
+							//  "</li><li>Direccion:  "   .$town . 
+							//  "</li><li>Cedula:  "   .$county . 
+							//  "</li><li> Telefono: "   .$tel . "</li></h1></ul>";
+							// echo $staff;
 
 							
 						}
-						mysqli_close($conn);
+						// mysqli_close($conn);
 					
 				?>
+				
+				<form class="form-4">
+					<h1>Información de la cuenta</h1>
+				<ul></ul>
+                <span class="text-gray-700 dark:text-gray-400">Nombre</span>
+				<input disabled type="text" name="nombr" value="<?php echo $Nombre ?>"class="contenido"/>
+				</label>
+				<ul></ul>
+				<span class="text-gray-700 dark:text-gray-400">Apellido</span>
+				<input disabled type="text" name="nombre" value="<?php echo $Apellido; ?>" class="contenido"/>
+				<span class="text-gray-700 dark:text-gray-400">Dirección</span>
+				<input disabled type="text" name="nombr" value="<?php echo $Direccion; ?>"class="contenido"/>
+				</label>
+				<ul></ul>
+				<span class="text-gray-700 dark:text-gray-400">Cedula</span>
+				<input disabled type="text" name="nombr" value="<?php echo $Cedula; ?>" class="contenido"/>
+				<span class="text-gray-700 dark:text-gray-400">Telefono</span>
+				<input disabled type="text" name="nombr" value="<?php echo $tel; ?>" class="contenido"/>
+				</label>
+				<ul></ul>
+				</form>
 				
 			</div> 
 			<!-- END OF FULL WIDGET-->
