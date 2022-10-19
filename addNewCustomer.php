@@ -15,7 +15,7 @@
 		
 		// Check connection
 		if (!$conn) {
-			die("Connection failed: " . mysqli_connect_error());
+			die("Connection fallida: " . mysqli_connect_error());
 		}
 		
 		// To protect MySQL injection for Security purpose

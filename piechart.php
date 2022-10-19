@@ -1,5 +1,5 @@
 <?php
-	date_default_timezone_set('Europe/Dublin');
+	date_default_timezone_set('America/Santo_Domingo');
 	//include database connection
 	$conn= mysqli_connect("localhost", "root", "", "compsys");
 	if (!$conn) {
@@ -48,7 +48,9 @@
 			]);
 			
 			var options = {
-				title: '<?php echo " "  .date('D F Y')?>',
+				title: '<?php
+setlocale(LC_TIME, "spanish");
+echo utf8_encode( strftime("%A, %d de %B de %Y")); ?>',
 				is3D: 'true',
 				pieSliceText: 'value',
 				slices: {  7: {offset: 0.2},

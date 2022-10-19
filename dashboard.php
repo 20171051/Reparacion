@@ -188,7 +188,7 @@
 				
 				<!-- Repair Summary -->
 				<div class="widget-content wide-widget">
-					<h1 class="center">Detalles de reparación </h1>
+					<h1 class="center">Reparaciones del mes </h1>
 					<!--Div that will hold the pie chart-->
 				<div id="pie_chart" style="width: 100%; height: 362px;"></div>
 				</div>

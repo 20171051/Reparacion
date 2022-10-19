@@ -68,6 +68,7 @@
 	</table>
     <br />
     <button type="submit" name="submit">Actualizar carrito</button>
+	<button type="submit" name="submit">Imprimir</button>
 </form>
 <br />
 <p>Para eliminar un artículo, establezca su cantidad en 0.</p>

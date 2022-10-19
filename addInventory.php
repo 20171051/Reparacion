@@ -136,7 +136,7 @@
 			<div class="bread dash">
 				<div class="submenu">
 					<ul>
-						<li id="back"><a href="##" onClick="history.go(-1); return false;">Retroceder</a></li>
+						<li id="back"><a href="servicios.php">Retroceder</a></li>
 						
 					</ul>
 				</div>
