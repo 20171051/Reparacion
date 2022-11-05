@@ -22,6 +22,7 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+-- CREATE DATABASE compsys CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 --
 -- Estructura de tabla para la tabla `customers`
@@ -34,7 +35,7 @@ CREATE TABLE `customers` (
   `town` char(20) NOT NULL,
   `county` char(20) NOT NULL DEFAULT '',
   `tel` char(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `customers`
@@ -79,7 +80,7 @@ CREATE TABLE `orderitems` (
   `stock_id` int(11) NOT NULL DEFAULT 0,
   `quantity` int(11) DEFAULT NULL,
   `total` decimal(9,2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -90,22 +91,23 @@ CREATE TABLE `orderitems` (
 CREATE TABLE `orders` (
   `ord_id` int(11) NOT NULL,
   `rep_id` int(11) NOT NULL DEFAULT 0,
-  `staff_id` int(11) NOT NULL DEFAULT 0,
+  `cust_id` int(11) NOT NULL DEFAULT 0,
   `ordDate` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `orders`
 --
 
-INSERT INTO `orders` (`ord_id`, `rep_id`, `staff_id`, `ordDate`) VALUES
-(1, 23, 1, '2022-10-19 23:09:11'),
-(2, 23, 1, '2022-10-19 23:09:13'),
-(3, 1, 1, '2022-10-19 23:11:04'),
-(4, 1, 1, '2022-10-19 23:11:05'),
-(5, 1, 1, '2022-10-19 23:11:05'),
-(6, 23, 1, '2022-10-21 16:20:40'),
-(7, 23, 1, '2022-10-26 22:18:19');
+INSERT INTO `orders` (`ord_id`, `cust_id`, `staff_id`, `ordDate`) VALUES
+(1,  1, 1, '2022-10-19 23:09:11'),
+(2,  3, 1, '2022-10-19 23:09:13'),
+(3, 4, 1, '2022-10-19 23:11:04'),
+(4, 2, 1, '2022-10-19 23:11:05'),
+(5, 3, 1, '2022-10-19 23:11:05'),
+(6,  1, 1, '2022-10-21 16:20:40'),
+(7,  1, 1, '2022-10-26 22:18:19'),
+;
 
 -- --------------------------------------------------------
 
@@ -125,7 +127,7 @@ CREATE TABLE `repairs` (
   `RepairDate` timestamp NOT NULL DEFAULT current_timestamp(),
   `CollectionDate` datetime DEFAULT NULL ON UPDATE current_timestamp(),
   `Status` enum('Nuevo','En proceso','Resuelto','Esperando por piezas','Esperando por cliente','Abandonado') NOT NULL DEFAULT 'Nuevo'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `repairs`
@@ -172,7 +174,7 @@ CREATE TABLE `staff` (
   `town` char(20) DEFAULT NULL,
   `county` char(20) DEFAULT NULL,
   `tel` char(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `staff`
@@ -192,22 +194,21 @@ INSERT INTO `staff` (`staff_id`, `forename`, `surname`, `username`, `password`, 
 CREATE TABLE `stock` (
   `stock_id` int(11) NOT NULL,
   `description` varchar(40) NOT NULL,
-  `quantity` int(11) DEFAULT NULL,
   `price` decimal(9,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `stock`
 --
 
-INSERT INTO `stock` (`stock_id`, `description`, `quantity`, `price`) VALUES
-(1, 'Instalación de Windows ', 0, '1800.00'),
-(2, 'Reparación de motherboard', 0, '3800.00'),
-(3, 'Mantenimiento a las PC/Laptop', 0, '1200.00'),
-(4, 'Mantenimiento a  impresoras', 0, '2400.00'),
-(5, 'Desbloqueo de impresoras', 0, '3500.00'),
-(6, 'Backup', 0, '1000.00'),
-(7, 'Reparación de bisagras', 0, '4800.00');
+INSERT INTO `stock` (`stock_id`, `description`, `price`) VALUES
+(1, 'Instalación de Windows ', '1800.00'),
+(2, 'Reparación de motherboard', '3800.00'),
+(3, 'Mantenimiento a las PC/Laptop', '1200.00'),
+(4, 'Mantenimiento a  impresoras', '2400.00'),
+(5, 'Desbloqueo de impresoras', '3500.00'),
+(6, 'Backup', '1000.00'),
+(7, 'Reparación de bisagras', '4800.00');
 
 -- --------------------------------------------------------
 
@@ -238,7 +239,7 @@ ALTER TABLE `orderitems`
 -- Indices de la tabla `orders`
 --
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`ord_id`,`rep_id`);
+  ADD PRIMARY KEY (`ord_id`,`cust_id`);
 
 --
 -- Indices de la tabla `repairs`
