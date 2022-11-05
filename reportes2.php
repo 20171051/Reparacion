@@ -16,7 +16,6 @@ class PDF extends FPDF
         $this->ln(20);
         $this->Ln();
         $this->SetFont('Arial','B',16);
-        $this->Cell(20, 10, 'ID', 1,0,'C',0);
         $this->Cell(40, 10, 'Nombre', 1,0,'C',0);
         $this->Cell(40, 10,'Apellido', 1,0,'C',0);
         $this->Cell(80, 10,'Direccion', 1,0,'C',0);
@@ -34,8 +33,8 @@ function Footer()
     $this->Cell(0,10,'pagina '.$this->PageNo().'/{nb}',0,0,'C');
 }
 }
-require'db.php';
-$consulta = "SELECT * FROM customers";
+require'config.php';
+$consulta = "SELECT * FROM customers ORDER BY forename ASC";
 $resultado = $mysqli->query($consulta);
 
 $pdf = new PDF();
@@ -45,13 +44,12 @@ $pdf->SetFont('Arial','',16);
 
 
 while($row = $resultado->fetch_assoc()){
-    $pdf->Cell(20, 10, $row['cust_id'], 1,0,'c',0);
     $pdf->Cell(40, 10, $row['forename'], 1,0,'c',0);
     $pdf->Cell(40, 10, $row['surname'], 1,0,'c',0);
     $pdf->Cell(80, 10, $row['town'], 1,0,'c',0);
     $pdf->Cell(50, 10, $row['tel'], 1,1,'C');
-    
-    
+
+
 }
 
 

@@ -36,7 +36,7 @@ function Footer()
 
 }
 }
-require'db.php';
+require 'includes/config.php';
 $consulta = "SELECT * FROM repairs";
 $resultado = $mysqli->query($consulta);
 
@@ -55,7 +55,7 @@ while($row = $resultado->fetch_assoc()){
     $pdf->Cell(40, 10, $row['Model'], 1,0,'L',0);
     $pdf->Cell(60, 10, $row['Status'], 1,1,'L',0);
 
-    
+
 }
 
 

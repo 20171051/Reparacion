@@ -7,35 +7,35 @@
 <html ng-app="myApp" ng-app lang="en">
 	<head>
 		<title>Ausbert multiservice-Agregar reparacion</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
 		<meta name="description" content="Lakeside Books">
 		<meta name="keywords" content="books, lakeside, cork, shop, online">
-		
-		<link rel="shortcut icon" href="favicon.ico"> 
+
+		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/global.css">
-		
+
 		<link rel="stylesheet" href="css/menu.css" />
 		<script src="js/modernizr.custom.js"></script>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<style type="text/css">
 			ul>li, a{cursor: pointer;}
 		</style>
-		
+
 		<style>@import url(http://fonts.googleapis.com/css?family=Raleway:400,700); </style>
-		
+
 	</head>
-	
+
 	<body id="top" style="font-size: 62.5%;">
 		<!-- Comienzo del Header -->
 		<header id="header-wrapper">
-			
+
 			<div id="top-bar" class="clearfix">
-				
+
 				<div id="top-bar-inner">
-					
+
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
@@ -43,10 +43,10 @@
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
-					
-					
+
+
 					<div class="topbar-right clearfix">
-						
+
 						<ul class="clearfix">
 							<li class="login-user">
 								<a title="<?php echo $login_session; ?>" href="#">
@@ -55,13 +55,13 @@
 								</a>
 							</li>
 						</ul>
-						
+
 						<div class="log-out">
 							<!-- <p><a title="Sign out" href="#">Sign out</a></p> -->
 							<p>
 								<a href="logout.php" title="Sign out">
 									<span>Salir</span>
-									<span class="icon"> 
+									<span class="icon">
 										<i aria-hidden="true" class="icon-exit"></i>
 									</span>
 								</a>
@@ -70,18 +70,18 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="full-shadow"></div>
-			
-			
+
+
 		</header>
 		<!-- END Header -->
-		
-		
+
+
 		<div class="main clearfix">
-			
+
 			<!-- Inicio menu -->
-			<nav id="menu" class="nav">					
+			<nav id="menu" class="nav">
 				<ul>
 					<li>
 						<a href="dashboard.php">
@@ -93,7 +93,7 @@
 					</li>
 					<li>
 						<a href="cliente.php">
-							<span class="icon"> 
+							<span class="icon">
 								<i aria-hidden="true" class="icon-users"></i>
 							</span>
 							<span>Clientes</span>
@@ -134,25 +134,25 @@
 				</ul>
 			</nav>
 			<!-- Final menu -->
-			
-			
+
+
 			<!--Accesorios -->
 			<div class="bread">
 				<div class="submenu">
 					<ul>
-						<li id="back"><a href="##" onClick="history.go(-1); return false;">Retroceder</a></li>
-						
+						<li><a href="chooseProducts.php">Retroceder</a></li>
+						<li id="add"><a href="chooseClientForOrder.php">Ordena ahora</a></li>
 					</ul>
 				</div>
-				<h3><a style="text-decoration: none;" href="reparaciones.php">Reparaciones</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Agregar</span>
+				<h3>Elige el cliente</h3>
 			</div>
 			<!--Accesorios -->
-			
-			
+
+
 			<div class="floats">
 				<div class=" full-widget">
 					<div ng-controller="customerCrtl">
-						
+
 						<div class="row">
 							<div class="col-md-2">Tamaño de pagina:
 								<select ng-model="entryLimit" class="form-control">
@@ -199,39 +199,39 @@
 									<h4>Cliente no encontrado</h4>
 								</div>
 							</div>
-							<div class="col-md-12" ng-show="filteredItems > 0">    
+							<div class="col-md-12" ng-show="filteredItems > 0">
 								<div pagination="" page="currentPage" on-select-page="setPage(page)" boundary-links="true" total-items="filteredItems" items-per-page="entryLimit" class="pagination-small" previous-text="&laquo;" next-text="&raquo;"></div>
-								
+
 							</div>
 						</div>
-						
-					</div> 
-					<!-- END OF CUSTOMERS LIST-->	
-					
+
+					</div>
+					<!-- END OF CUSTOMERS LIST-->
+
 					<div>
-						<form class="form-4" method="post" action="addRepairForm.php">	
+						<form class="form-4" method="post" action="orderNow.php">
 							<p>Ingrese el ID del cliente para continuar con el registro del equipo:</p> <br>
 							<input type="number" name="record" placeholder="Introduzca un numero ej: 1" min="1" maxlength="10" required>
-							<input type="submit" name="go" value="Agregar >>">	
+							<input type="submit" name="go" value="Agregar >>">
 						</form>
 					</div>
-					
-				</div> 
+
+				</div>
 				<!-- END OF FULL WIDGET-->
-				
-				
-			</div> 
+
+
+			</div>
 			<!-- FINAL FLOATS-->
 		</div>
 		<!-- END OF MAIN-->
-		
+
 		<!-- SCRIPT FOR THE MENU -->
 		<script src="js/menu.js"></script>
 		<!-- SCRIPT FOR THE MENU -->
 		<script src="js/angular.min.customer.js"></script>
 		<script src="js/ui-bootstrap-tpls-0.10.0.min.customer.js"></script>
-		<script src="app/customer.js"></script>  
-		
+		<script src="app/customer.js"></script>
+
 	</body>
-	
-</html> 									
+
+</html>

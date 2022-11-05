@@ -144,7 +144,7 @@
 					<ul>
 						<li id="Update Inventory" value="Update Inventory" onclick="showUpdate()">Actualizar Servicios</li>
 						<li id="add"><a href="addInventory.php">Agregar servicios</a></li>
-						<li id="del" value="Delete Inventory" onclick="showDelete()">Eliminar Servicios</li>
+						<!-- <li id="del" value="Delete Inventory" onclick="showDelete()">Eliminar Servicios</li> -->
 					</ul>
 				</div>
 				<h3>Servicios</h3>

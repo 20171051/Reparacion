@@ -1,148 +1,169 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
--- http://www.phpmyadmin.net
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 13, 2015 at 07:29 PM
--- Server version: 5.6.21
--- PHP Version: 5.6.3
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 02-11-2022 a las 16:14:40
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `compsys`
+-- Base de datos: `compsys`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customers`
+-- Estructura de tabla para la tabla `customers`
 --
 
-CREATE TABLE IF NOT EXISTS `customers` (
-`cust_id` int(11) NOT NULL,
+CREATE TABLE `customers` (
+  `cust_id` int(11) NOT NULL,
   `surname` char(25) NOT NULL,
   `forename` char(25) NOT NULL,
   `town` char(20) NOT NULL,
   `county` char(20) NOT NULL DEFAULT '',
   `tel` char(15) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `customers`
+-- Volcado de datos para la tabla `customers`
 --
 
 INSERT INTO `customers` (`cust_id`, `surname`, `forename`, `town`, `county`, `tel`) VALUES
-(1, 'Alam', 'Nazmul', 'Castleisland', 'Kerry', '0833114171'),
-(2, 'Sadiq', 'Samina', 'Roscrea', 'Tipperary', '0879820417'),
-(3, 'Dowling', 'Sam', 'Castleisland', 'Kerry', '0872183569'),
-(4, 'Bluett', 'Luke', 'Abbeyfeale', 'Limerick', '0868780756'),
-(5, 'Abdul', 'Naiem', 'Castleislandd', 'Kerry', '0877187552'),
-(6, 'Abdul', 'Niamh', 'Castleisland', 'Kerry', '0872183569'),
-(7, 'Joe Landers', 'John', 'Anascaul', 'Kerry', '0872183569'),
-(8, 'Killian', 'Ross', 'Tralee', 'Kerry', '0872183569'),
-(9, 'O''Sullivan', 'Daniel', 'Killarney', 'Kerry', '0872183569'),
-(10, 'Hossain', 'Azad', 'Tralee', 'Kerry', '0871234567');
+(1, 'Collado', 'Zoraida', 'Salcedo', '055753951', '8093311414'),
+(2, 'Blanco', 'Keyla', 'Piantini', '40278978998', '80979820417'),
+(3, 'Mercado', 'Carlos', 'Villa Mirabal', '4025789878', '80972183569'),
+(4, 'Collado', 'Lorena', 'Villa Mirabal', '4025789878', '80968780756'),
+(5, 'Perez', 'Juan', 'Palmarito', '4025789879', '8497718755'),
+(6, 'Santana', 'Juan Carlos', 'Naco, distrito nacio', '4027859878', '8097218356'),
+(7, 'Perez', 'John', 'Naco, distrito nacio', '40275395147', '849721835'),
+(8, 'Diaz', 'Rosa', 'Villa Mella', '40275395147', '8097218354'),
+(9, 'Gonzales', 'Daniel', 'Villa consuelo', '05578965478', '8498898052'),
+(10, 'Diaz', 'Carolina', 'Distrito nacional', '05578965478', '80971234567'),
+(11, 'Pere', 'Juan', 'San juan', '21345678', '8456884833'),
+(12, 'Santana', 'Jean', 'Distrito Nacional', '0555789654', '8498898052'),
+(13, 'Medina', 'Emilio', 'Mejoramiento Social', '4027536987', '8495789654'),
+(14, 'Florentino', 'Juan', 'Mejoramiento Social', '12737843', '845688478');
 
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `monthlyrepairs`
+-- Estructura Stand-in para la vista `monthlyrepairs`
+-- (Véase abajo para la vista actual)
 --
-CREATE TABLE IF NOT EXISTS `monthlyrepairs` (
-`status` enum('New','In Progress','Resolved','Waiting for Parts','Waiting for Customer','Validated','Invoiced','Estimate Assigned')
+CREATE TABLE `monthlyrepairs` (
+`status` enum('Nuevo','En proceso','Resuelto','Esperando por piezas','Esperando por cliente','Abandonado')
 ,`total` bigint(21)
 );
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orderitems`
+-- Estructura de tabla para la tabla `orderitems`
 --
 
-CREATE TABLE IF NOT EXISTS `orderitems` (
-`ordItems_id` int(11) NOT NULL,
+CREATE TABLE `orderitems` (
+  `ordItems_id` int(11) NOT NULL,
   `ord_id` int(11) NOT NULL,
-  `stock_id` int(11) NOT NULL DEFAULT '0',
+  `stock_id` int(11) NOT NULL DEFAULT 0,
   `quantity` int(11) DEFAULT NULL,
   `total` decimal(9,2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Estructura de tabla para la tabla `orders`
 --
 
-CREATE TABLE IF NOT EXISTS `orders` (
-`ord_id` int(11) NOT NULL,
-  `rep_id` int(11) NOT NULL DEFAULT '0',
-  `staff_id` int(11) NOT NULL DEFAULT '0',
-  `ordDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `orders` (
+  `ord_id` int(11) NOT NULL,
+  `rep_id` int(11) NOT NULL DEFAULT 0,
+  `staff_id` int(11) NOT NULL DEFAULT 0,
+  `ordDate` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `orders`
+--
+
+INSERT INTO `orders` (`ord_id`, `rep_id`, `staff_id`, `ordDate`) VALUES
+(1, 23, 1, '2022-10-19 23:09:11'),
+(2, 23, 1, '2022-10-19 23:09:13'),
+(3, 1, 1, '2022-10-19 23:11:04'),
+(4, 1, 1, '2022-10-19 23:11:05'),
+(5, 1, 1, '2022-10-19 23:11:05'),
+(6, 23, 1, '2022-10-21 16:20:40'),
+(7, 23, 1, '2022-10-26 22:18:19');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `repairs`
+-- Estructura de tabla para la tabla `repairs`
 --
 
-CREATE TABLE IF NOT EXISTS `repairs` (
-`Rep_ID` int(11) NOT NULL,
+CREATE TABLE `repairs` (
+  `Rep_ID` int(11) NOT NULL,
   `Cust_ID` int(11) NOT NULL,
   `Staff_ID` int(11) NOT NULL,
   `Description` varchar(1000) NOT NULL,
-  `DeviceType` enum('Laptop','Desktop','Printer','Other') NOT NULL,
+  `DeviceType` enum('Laptop','PC','Impresora','Otros') NOT NULL,
   `Brand` varchar(30) NOT NULL,
   `Model` varchar(30) NOT NULL,
-  `OS` enum('Windows 7','Windows 8','Windows Vista','Windows Older','MacOS','Linux','Other') NOT NULL,
-  `RepairDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `CollectionDate` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  `Status` enum('New','In Progress','Resolved','Waiting for Parts','Waiting for Customer','Validated','Invoiced','Estimate Assigned') NOT NULL DEFAULT 'New'
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+  `OS` enum('Windows 7','Windows 8','Windows 10','Windows 11','Otros') NOT NULL,
+  `RepairDate` timestamp NOT NULL DEFAULT current_timestamp(),
+  `CollectionDate` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `Status` enum('Nuevo','En proceso','Resuelto','Esperando por piezas','Esperando por cliente','Abandonado') NOT NULL DEFAULT 'Nuevo'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `repairs`
+-- Volcado de datos para la tabla `repairs`
 --
 
 INSERT INTO `repairs` (`Rep_ID`, `Cust_ID`, `Staff_ID`, `Description`, `DeviceType`, `Brand`, `Model`, `OS`, `RepairDate`, `CollectionDate`, `Status`) VALUES
-(1, 10, 2, 'Paper stuck', 'Printer', 'HP', 'Inkjet', 'Other', '2015-01-01 19:34:24', '2015-01-12 18:21:00', 'New'),
-(2, 1, 1, 'Motherboard Problem', 'Laptop', 'Alienware', 'M15x', 'Windows 7', '2022-10-16 20:45:52', '2022-12-25 17:29:18', 'Waiting for Customer'),
-(3, 1, 1, 'Virus Removal', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:24', NULL, 'New'),
-(4, 1, 1, 'Virus Removal', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:26', NULL, 'In Progress'),
-(5, 1, 1, 'Virus Removal', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:26', NULL, 'Resolved'),
-(6, 1, 1, 'Virus Removal', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:26', NULL, 'Waiting for Parts'),
-(7, 1, 1, 'Virus Removal', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:27', NULL, 'Invoiced'),
-(8, 1, 1, 'Virus Removal', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:27', NULL, 'Estimate Assigned'),
-(9, 1, 1, 'Virus Removal', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:27', NULL, 'Validated'),
-(10, 1, 1, 'Virus Removal', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:27', NULL, 'In Progress'),
-(11, 1, 1, 'Virus Removal', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:27', NULL, 'New'),
-(12, 1, 1, 'Virus Removal', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:28', NULL, 'Resolved'),
-(13, 1, 1, 'Virus Removal', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:28', NULL, 'Resolved'),
-(14, 1, 1, 'Virus Removal', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:28', NULL, 'Resolved'),
-(15, 1, 1, 'Virus Removal', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:28', NULL, 'New'),
-(16, 1, 1, 'Virus Removal', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:28', NULL, 'New'),
-(17, 1, 1, 'Virus Removal', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:28', NULL, 'New'),
-(18, 1, 1, 'Virus Removal', 'Desktop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:29', '2022-12-25 19:40:08', 'New'),
-(19, 1, 1, 'Office Installation\r\nPrinter driver\r\nAnti-virus Installation', 'Laptop', 'Lenovo', 'ThinkCentre Edge E73', 'Windows 7', '2022-10-16 20:46:29', '2022-12-25 17:22:04', 'New'),
-(20, 1, 1, 'Software Installation', 'Laptop', 'Apple', 'Macbook Pro', 'Windows 7', '2022-10-16 22:01:07', '2022-12-25 17:09:10', 'New'),
-(21, 2, 1, 'BSOD', 'Laptop', 'Lenovo', 'ThinkPad Edge E545', 'Windows 8', '2022-12-25 19:29:02', NULL, 'New'),
-(22, 3, 1, 'Hinges Broke', 'Laptop', 'Toshiba', 'Satellite Pro R50-B-', 'Linux', '2022-12-25 19:34:24', NULL, 'New');
+(1, 10, 2, 'Pantalla Rota', 'Laptop', 'HP', 'Pavilio', 'Windows 7', '2022-10-11 19:34:24', '2022-10-19 07:12:54', 'Nuevo'),
+(2, 1, 1, 'Motherboard  quemado', 'Laptop', 'HP', '15', 'Windows 10', '2022-10-16 20:45:52', '2022-10-17 22:06:13', 'En proceso'),
+(3, 1, 1, 'Instalacion de office', 'Laptop', 'Dell', 'D360', 'Windows 10', '2022-10-16 20:46:24', '2022-10-17 22:07:13', 'Esperando por cliente'),
+(4, 1, 1, 'No da video\r\n', 'Laptop', 'Dell', 'XPS', 'Windows 11', '2022-10-16 20:46:26', '2022-10-17 22:09:10', 'Nuevo'),
+(5, 1, 1, 'Atasco de papel', 'Impresora', 'HP ', 'deskjet', 'Otros', '2022-10-16 20:46:26', '2022-10-17 22:13:04', 'En proceso'),
+(6, 1, 1, 'Base de bisagra rota', 'Laptop', 'Dell', 'inspiron', 'Windows 10', '2022-10-16 20:46:26', '2022-10-17 22:14:29', 'Esperando por cliente'),
+(7, 1, 1, 'Error de scanner ', 'Impresora', 'HP', 'OfficeJet', 'Otros', '2022-10-16 20:46:27', '2022-10-17 22:21:39', 'Nuevo'),
+(8, 1, 1, 'Reinstalación de window ', 'PC', 'Dell', ' optiplex', 'Windows 11', '2022-10-16 20:46:27', '2022-10-17 22:23:25', 'En proceso'),
+(9, 1, 1, 'Error de teclado', 'Laptop', 'Dell', 'inspiron', 'Windows 10', '2022-10-16 20:46:27', '2022-10-17 22:25:33', 'Resuelto'),
+(10, 1, 1, 'Papel atascado ', 'Impresora', 'Canon', 'Pixma', 'Windows 10', '2022-10-16 20:46:27', '2022-10-17 22:27:56', 'En proceso'),
+(11, 1, 1, 'No detecta wifi', 'Laptop', 'Lenovo ', 'ideapad', 'Windows 11', '2022-10-16 20:46:27', '2022-10-17 22:29:09', 'En proceso'),
+(12, 1, 1, 'Pantalla con mancha verde ', 'Laptop', 'Dell', 'D360', 'Windows 7', '2022-10-16 20:46:28', '2022-10-18 19:05:45', 'Nuevo'),
+(13, 1, 1, 'Error del power supply', 'PC', 'HP', 'COMPAQ', 'Windows 11', '2022-10-16 20:46:28', '2022-10-17 22:34:26', 'Abandonado'),
+(14, 1, 1, 'Error de cartucho', 'Impresora', 'Canon', 'Pixma', 'Otros', '2022-10-16 20:46:28', '2022-10-17 22:37:53', 'Esperando por cliente'),
+(15, 1, 1, 'inspiron', 'Laptop', 'Dell', 'D360', 'Windows 10', '2022-10-16 20:46:28', '2022-10-17 22:40:09', 'Esperando por piezas'),
+(16, 1, 1, 'Papel atascado', 'Impresora', 'EPSON ', 'L', 'Otros', '2022-10-16 20:46:28', '2022-10-17 22:41:55', 'Esperando por piezas'),
+(17, 1, 1, 'Reinstalación del Windows', 'Laptop', 'latitude', 'D360', 'Windows 10', '2022-10-16 20:46:28', '2022-10-17 22:44:35', 'Resuelto'),
+(18, 1, 1, 'Error de memoria', 'PC', 'Lenovo ', ' ThinkCenter', 'Windows 10', '2022-10-16 20:46:29', '2022-10-17 22:46:45', 'Esperando por cliente'),
+(19, 1, 1, 'No reconoce el disco duro', 'Laptop', 'Lenovo', 'ideapad s340', 'Windows 10', '2022-10-16 20:46:29', '2022-10-17 22:54:09', 'En proceso'),
+(20, 1, 1, 'No reconoce USB', 'Laptop', 'HP', 'OfficeJet', 'Otros', '2022-10-16 22:01:07', '2022-10-17 22:57:13', 'Nuevo'),
+(21, 2, 1, 'Se calienta demasiado', 'PC', 'PC', 'Clon', 'Windows 11', '2022-12-25 19:29:02', '2022-10-17 22:59:23', 'Nuevo'),
+(22, 3, 1, 'Mancha en la pantalla', 'Laptop', 'Toshiba', 'Satellite ', 'Windows 7', '2022-12-25 19:34:24', '2022-10-18 19:07:38', 'Nuevo'),
+(23, 13, 3, 'Pantalla parpadea', 'Laptop', 'Lenovo', 'Z270', 'Windows 7', '2022-10-19 00:05:31', '2022-10-19 08:54:21', 'Resuelto');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `staff`
+-- Estructura de tabla para la tabla `staff`
 --
 
-CREATE TABLE IF NOT EXISTS `staff` (
-`staff_id` int(11) NOT NULL,
+CREATE TABLE `staff` (
+  `staff_id` int(11) NOT NULL,
   `forename` char(25) NOT NULL,
   `surname` char(25) NOT NULL,
   `username` varchar(11) DEFAULT NULL,
@@ -151,135 +172,148 @@ CREATE TABLE IF NOT EXISTS `staff` (
   `town` char(20) DEFAULT NULL,
   `county` char(20) DEFAULT NULL,
   `tel` char(15) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `staff`
+-- Volcado de datos para la tabla `staff`
 --
 
 INSERT INTO `staff` (`staff_id`, `forename`, `surname`, `username`, `password`, `email`, `town`, `county`, `tel`) VALUES
-(1, 'Nazmul', 'Alam', 'admin', 'admin', 'danazzy@live.com', 'Castleisland', 'Kerry', '0833114171'),
-(2, 'Samina', 'Nazmul Alam', 'Samboo', 'mag1cwand', 'Saminas14@hotmail.com', 'Roscrea', 'Tipperary', '0879820417');
+(1, 'Zori', 'Collado', 'admin', 'admin', 'zori_collado@hotmail.com', 'Salcedo', '05545698715', '80933114171'),
+(2, 'Emil', 'Medina', 'Admin2', 'admin2', 'emilmedina@hotmail.com', 'Mejoramiento Social', '05545698715', '0879820417'),
+(3, 'Jean', 'Santana', 'admin3', 'admin3', 'intento@hotmail.com', 'Distrito Nacional', '0555789654', '8498898052');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stock`
+-- Estructura de tabla para la tabla `stock`
 --
 
-CREATE TABLE IF NOT EXISTS `stock` (
-`stock_id` int(11) NOT NULL,
+CREATE TABLE `stock` (
+  `stock_id` int(11) NOT NULL,
   `description` varchar(40) NOT NULL,
   `quantity` int(11) DEFAULT NULL,
-  `price` decimal(4,2) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+  `price` decimal(9,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `stock`
+-- Volcado de datos para la tabla `stock`
 --
 
 INSERT INTO `stock` (`stock_id`, `description`, `quantity`, `price`) VALUES
-(1, 'Labour', 1000, '45.00'),
-(2, 'Rush Labour', 500, '75.00'),
-(3, 'Printer', 1, '15.00'),
-(4, 'Anti-Virus Software', 1, '30.00'),
-(5, 'Backup & Restore', 1, '45.00'),
-(6, '500GB HDD', 5, '25.99'),
-(7, '128GB SSD Drive', 5, '69.99');
+(1, 'Instalación de Windows ', 0, '1800.00'),
+(2, 'Reparación de motherboard', 0, '3800.00'),
+(3, 'Mantenimiento a las PC/Laptop', 0, '1200.00'),
+(4, 'Mantenimiento a  impresoras', 0, '2400.00'),
+(5, 'Desbloqueo de impresoras', 0, '3500.00'),
+(6, 'Backup', 0, '1000.00'),
+(7, 'Reparación de bisagras', 0, '4800.00');
 
 -- --------------------------------------------------------
 
 --
--- Structure for view `monthlyrepairs`
+-- Estructura para la vista `monthlyrepairs`
 --
 DROP TABLE IF EXISTS `monthlyrepairs`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `monthlyrepairs` AS select `repairs`.`Status` AS `status`,count(`repairs`.`Status`) AS `total` from `repairs` where (month(`repairs`.`RepairDate`) = extract(month from now())) group by `repairs`.`Status` order by `repairs`.`RepairDate` desc;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `monthlyrepairs`  AS SELECT `repairs`.`Status` AS `status`, count(`repairs`.`Status`) AS `total` FROM `repairs` WHERE month(`repairs`.`RepairDate`) = extract(month from current_timestamp()) GROUP BY `repairs`.`Status` ORDER BY `repairs`.`RepairDate` desc ;
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `customers`
+-- Indices de la tabla `customers`
 --
 ALTER TABLE `customers`
- ADD PRIMARY KEY (`cust_id`);
+  ADD PRIMARY KEY (`cust_id`);
 
 --
--- Indexes for table `orderitems`
+-- Indices de la tabla `orderitems`
 --
 ALTER TABLE `orderitems`
- ADD PRIMARY KEY (`ordItems_id`,`ord_id`);
+  ADD PRIMARY KEY (`ordItems_id`,`ord_id`);
 
 --
--- Indexes for table `orders`
+-- Indices de la tabla `orders`
 --
 ALTER TABLE `orders`
- ADD PRIMARY KEY (`ord_id`,`rep_id`);
+  ADD PRIMARY KEY (`ord_id`,`rep_id`);
 
 --
--- Indexes for table `repairs`
+-- Indices de la tabla `repairs`
 --
 ALTER TABLE `repairs`
- ADD PRIMARY KEY (`Rep_ID`,`Cust_ID`,`Staff_ID`), ADD KEY `fk_Repairs_Cust` (`Cust_ID`), ADD KEY `fk_Repairs_Staff` (`Staff_ID`);
+  ADD PRIMARY KEY (`Rep_ID`,`Cust_ID`,`Staff_ID`),
+  ADD KEY `fk_Repairs_Cust` (`Cust_ID`),
+  ADD KEY `fk_Repairs_Staff` (`Staff_ID`);
 
 --
--- Indexes for table `staff`
+-- Indices de la tabla `staff`
 --
 ALTER TABLE `staff`
- ADD PRIMARY KEY (`staff_id`), ADD UNIQUE KEY `username` (`username`), ADD UNIQUE KEY `password` (`password`), ADD UNIQUE KEY `email` (`email`);
+  ADD PRIMARY KEY (`staff_id`),
+  ADD UNIQUE KEY `username` (`username`),
+  ADD UNIQUE KEY `password` (`password`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
--- Indexes for table `stock`
+-- Indices de la tabla `stock`
 --
 ALTER TABLE `stock`
- ADD PRIMARY KEY (`stock_id`);
+  ADD PRIMARY KEY (`stock_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `customers`
+-- AUTO_INCREMENT de la tabla `customers`
 --
 ALTER TABLE `customers`
-MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 --
--- AUTO_INCREMENT for table `orderitems`
+-- AUTO_INCREMENT de la tabla `orderitems`
 --
 ALTER TABLE `orderitems`
-MODIFY `ordItems_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ordItems_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT for table `orders`
+-- AUTO_INCREMENT de la tabla `orders`
 --
 ALTER TABLE `orders`
-MODIFY `ord_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ord_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
--- AUTO_INCREMENT for table `repairs`
+-- AUTO_INCREMENT de la tabla `repairs`
 --
 ALTER TABLE `repairs`
-MODIFY `Rep_ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
+  MODIFY `Rep_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
 --
--- AUTO_INCREMENT for table `staff`
+-- AUTO_INCREMENT de la tabla `staff`
 --
 ALTER TABLE `staff`
-MODIFY `staff_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `staff_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
--- AUTO_INCREMENT for table `stock`
+-- AUTO_INCREMENT de la tabla `stock`
 --
 ALTER TABLE `stock`
-MODIFY `stock_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `stock_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `repairs`
+-- Filtros para la tabla `repairs`
 --
 ALTER TABLE `repairs`
-ADD CONSTRAINT `fk_Repairs_Cust` FOREIGN KEY (`Cust_ID`) REFERENCES `customers` (`cust_id`),
-ADD CONSTRAINT `fk_Repairs_Staff` FOREIGN KEY (`Staff_ID`) REFERENCES `staff` (`staff_id`);
+  ADD CONSTRAINT `fk_Repairs_Cust` FOREIGN KEY (`Cust_ID`) REFERENCES `customers` (`cust_id`),
+  ADD CONSTRAINT `fk_Repairs_Staff` FOREIGN KEY (`Staff_ID`) REFERENCES `staff` (`staff_id`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

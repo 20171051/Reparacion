@@ -101,7 +101,7 @@
 						</a>
 					</li>
 					<li>
-						<<a href="reparaciones.php">
+						<a href="reparaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
 							</span>

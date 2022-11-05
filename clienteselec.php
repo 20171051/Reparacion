@@ -1,14 +1,51 @@
 <?php
-	require_once('session.php');
-	require_once('update/repairForm.php');
-	require_once('update/repairUpdated.php');
-	require_once('update/functions.php');
+	require('session.php');
+
+	// Connect to the database server
+	if (isset($_GET['id']) and is_numeric($_GET['id'])) {
+
+		$dbcnx = mysqli_connect("localhost", "root", "", "compsys");
+		if (mysqli_connect_errno())
+		{
+			echo "Failed to connect to MySQL: " .mysqli_connect_error();
+			exit();
+		}
+
+
+		$cid = $_GET['id'];
+
+		$sql = "SELECT * FROM customers WHERE cust_id=$cid";
+
+		$res = mysqli_query($dbcnx, $sql);
+		if ( !$res ) {
+			echo('Query failed ' . $sql . ' Error:' . mysqli_error($dbcnx));
+			exit();
+		}
+
+		else
+		{
+			$row = mysqli_fetch_array($res);
+			$id = $row['cust_id'];
+			$surname = $row['surname'];
+			$forename = $row['forename'];
+			$town = $row['town'];
+			$county = $row['county'];
+			$tel = $row['tel'];
+		}
+		//free results
+		mysqli_free_result($res);
+
+		//close connection
+		mysqli_close($dbcnx);
+	} else {
+		header("location: /cliente.php");
+	}
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<title>Ausbert Multi Service - Actualizar reparacion</title>
+	<title>Ausbert multiservice-Cliente</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
@@ -22,12 +59,13 @@
 		<link rel="stylesheet" href="css/menu.css" />
 		<script src="js/modernizr.custom.js"></script>
 
+
 		<style>@import url(http://fonts.googleapis.com/css?family=Raleway:400,700); </style>
 
 	</head>
 
 	<body id="top" style="font-size: 62.5%;">
-		<!-- Comienzo del Header -->
+		<!-- BEGIN Header -->
 		<header id="header-wrapper">
 
 			<div id="top-bar" class="clearfix">
@@ -36,7 +74,7 @@
 
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
-						<form action="customer-search.php" method="post">
+						<form action="" method="post">
 							<input type="text" name="search_box" id="search_box" placeholder="Buscar cliente....">
 						</form>
 					</div>
@@ -67,7 +105,7 @@
 						</div>
 					</div>
 				</div>
-				</div>
+			</div>
 
 			<div class="full-shadow"></div>
 
@@ -78,7 +116,7 @@
 
 		<div class="main clearfix">
 
-			<!-- Inicio menu -->
+			<!-- START OF NAVIGATION -->
 			<nav id="menu" class="nav">
 				<ul>
 					<li>
@@ -90,6 +128,7 @@
 						</a>
 					</li>
 					<li>
+					<li class="active">
 						<a href="cliente.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-users"></i>
@@ -97,7 +136,7 @@
 							<span>Clientes</span>
 						</a>
 					</li>
-					<li class="active">
+					<li>
 						<a href="reparaciones.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-hammer"></i>
@@ -106,14 +145,14 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="cotizaciones.php">
 							<span class="icon">
-							<i aria-hidden="true" class="icon-coin"></i>
+								<i aria-hidden="true" class="icon-coin"></i>
 							</span>
 							<span>Cotizaciones</span>
 						</a>
 					</li>
-					<li>
+				<li>
 						<a href="servicios.php">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-barcode"></i>
@@ -121,63 +160,64 @@
 							<span>Servicios</span>
 						</a>
 					</li>
-					<li>
-						<a href="cuentas.php">
+					<li class="">
+						<a href="cuenta.php">
 							<span class="icon">
-								<!-- <i aria-hidden="true" class="icon-coin"></i> -->
 								<i aria-hidden="true" class="icon-user"></i>
 							</span>
-							<span>Cuentas</span>
+							<span>Cuenta</span>
 						</a>
 					</li>
 				</ul>
 			</nav>
-			<!-- Final menu -->
+					<!--<li>
+						<a href="#">
+							<span class="icon">
+								<i aria-hidden="true" class="icon-coin"></i>
+							</span>
+							<span>Facturas</span>
+						</a>
+					</li>
+				</ul>
+			</nav>-->
+			<!-- END OF NAVIGATION -->
 
 
-			<!--Accesorios -->
-			<div class="bread dash">
-				<div class="submenu">
-					<ul>
-						<li><a href="##" onClick="history.go(-1); return false;">Retroceder</a></li>
-						<li id="add"><a href="agregarrep.php">Agregar reparación</a></li>
-					</ul>
-				</div>
-				<h3><a style="text-decoration: none;" href="reparaciones.php">Reparacion</a></h3> <span style="font-size: 1.2em; font-weight: 500">\ Actualizacion de reparacion</span>
-			</div>
-			<!--Accesorios -->
+			<!--Breadcrumb -->
+			<div class="bread dash"><h3>Clientes</h3></div>
+			<!--Breadcrumb -->
 
 
 			<div class="floats">
-				<div class="full-widget">
-					<span id="msg">
-						<?php
-							echo $success;
-							echo $error;
-						?>
-					</span>
-					<form class="form-4" action="" method="post">
-						<input type="hidden" name="record" value="<?php echo $cust_id; ?>" readonly>
-						<input type="hidden" name="ud_id" value="<?php echo $id; ?>" readonly>
-						ID del cliente: <input type="text" value="<?php echo "$forename $surname (id: $cust_id)"; ?>" readonly>
-						<input type="text" name="ud_cust_id" value="<?php echo $cust_id; ?>" readonly>
-						<input type="hidden" name="ud_staff_id" value="<?php echo $staff_id; ?>" readonly>
-						Tipo de equipo: <?php echo enumDropdown("repairs", "DeviceType", "ud_device", $device); ?>
-						Marca: <input type="text" name="ud_brand" value="<?php echo $brand; ?>" required>
-						Modelo: <input type="text" name="ud_model" value="<?php echo $model; ?>" required>
-						Sistema operativo: <?php echo enumDropdown("repairs", "OS", "ud_os", $os); ?>
-						Descripcion: <textarea rows="5" name="ud_description" required><?php echo $description; ?></textarea>
-						Estado: <?php echo enumDropdown("repairs", "Status", "ud_status", $status); ?>
-						<input type="submit" name="submit" value="Actualizar">
 
-					</form>
-
+				<!-- Easy access links -->
+				<div class="widget-content full-widget">
+				<form class="form-4">
+				<ul></ul>
+				<span class="text-gray-700 dark:text-gray-400">Nombre</span>
+				<input disabled type="text" name="nombr" value="<?php echo $forename ?>"class="contenido"/>
+				</label>
+				<ul></ul>
+				<span class="text-gray-700 dark:text-gray-400">Apellido</span>
+				<input disabled type="text" name="nombre" value="<?php echo $surname; ?>" class="contenido"/>
+				<span class="text-gray-700 dark:text-gray-400">Dirección</span>
+				<input disabled type="text" name="nombr" value="<?php echo $town; ?>"class="contenido"/>
+				</label>
+				<ul></ul>
+				<span class="text-gray-700 dark:text-gray-400">Cedula</span>
+				<input disabled type="text" name="nombr" value="<?php echo $county; ?>" class="contenido"/>
+				<span class="text-gray-700 dark:text-gray-400">Telefono</span>
+				<input disabled type="text" name="nombr" value="<?php echo $tel; ?>" class="contenido"/>
+				</label>
+				<ul></ul>
+				</form>
+					<?php  echo $error; ?>
 				</div>
+				<!-- Easy access links -->
 
 			</div>
-			<!-- FINAL FLOATS-->
 		</div>
-		<!-- END OF MAIN-->
+
 
 		<!-- SCRIPT FOR THE MENU -->
 		<script src="js/menu.js"></script>
